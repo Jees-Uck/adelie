@@ -5,8 +5,11 @@ import Footer from './layouts/footer.vue'
 
 <template>
 <div class="wrap">
+  <div class="topManyLines"></div>
   <Header/>
-  <div class="vectorFooterManyLines"></div>
+  <div class="vectorFooterManyLines">
+  </div>
+  <div class="vectorBottomRight"></div>
 </div>
   <Footer/>
 
@@ -14,7 +17,7 @@ import Footer from './layouts/footer.vue'
 
 <style>
 #app {
-  font-family: Lato, Arial, sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #000;
@@ -29,10 +32,42 @@ body {
     height: 100%;
 
   background: #FFF;
-  font-family: Lato, Arial, sans-serif;
+
   margin: 0;
   overflow: hidden;
 }
+
+/*Шрифти*/
+@font-face {
+    font-family: 'gilroylight';/*300*/
+    src: url('src/fonts/gilroy-light-webfont.woff2') format('woff2'),
+         url('src/fonts/gilroy-light-webfont.woff') format('woff'),
+         url('src/fonts/gilroy-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gilroymedium';/*500*/
+    src: url('src/fonts/gilroy-medium-webfont.woff2') format('woff2'),
+         url('src/fonts/gilroy-medium-webfont.woff') format('woff'),
+         url('src/fonts/gilroy-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'gilroyregular'; /*400*/
+    src: url('src/fonts/gilroy-regular-webfont.woff2') format('woff2'),
+         url('src/fonts/gilroy-regular-webfont.woff') format('woff'),
+         url('src/fonts/gilroy-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 .wrap{
   min-height: 100%;
 }
@@ -53,9 +88,9 @@ button{
 .container {
   width: 100%;
   display: block;
-  max-width: 1277px;
+  max-width: 355px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 10px;
   height: 100%;
 }
 .container:after {
@@ -63,33 +98,135 @@ button{
 }
 
 /* VECTORS */
-.mainVectorBottomRight{
-  z-index: 0;
+.topManyLines{
+    background-image: url('src/assets/vectors/globalVectors/topManyLines.svg');
+      background-size: cover;
+  background-position: center;
   position: absolute;
-  bottom: -81px;
-  right: -28px;
+  min-width: 199px;
+  min-height: 109px;
+  top: -34px;
+  left: -100px;
+transform: rotate(-9.87deg);
 }
-.mainVectorBottomRightManyLines{
- 
-  position: absolute;
-  bottom: -50px;
-  right: -270px;
-
-transform: rotate(-24.387deg);
-   z-index: 0;
-}
-
 .vectorFooterManyLines{
-  background-image: url('C:\Users\User\Desktop\AdelieMain\adelie\src\assets\vectors\globalVectors\VectorBottomRightManyLines.svg');
+  background-image: url('src/assets/vectors/globalVectors/VectorBottomRightManyLines.svg');
   background-size: cover;
   background-position: center;
-  width: 1148px;
-  height: 801px;
-      z-index: 0;
+  min-width: 954px;
+
+  z-index: 0;
   position: absolute;
   bottom: -50px;
-  right: -270px;
-transform: rotate(-24.387deg);
+  right: -494px;
+  transform: rotate(-24.387deg);
+  overflow: hidden;
+
 }
+.vectorFooterManyLines::before{
+  content: '';
+position: absolute;
+background-image: url('src/assets/vectors/globalVectors/plus.svg');
+width: 8px;
+height: 8px;
+top: 173px;
+left: 305px;
+
+
+}
+.vectorBottomRight{
+  background-image: url('src/assets/vectors/globalVectors/VectorBottomRight.svg');
+    background-size: cover;
+  background-position: center;
+    min-width: 331px;
+  min-height: 395px;
+  z-index: 0;
+  position: absolute;
+bottom: 79px;
+right: -18px;
+  overflow: hidden;
+}
+
+/*Медіазапити*/
+
+@media (min-width: 576px) { 
+.container {
+  max-width: 500px;
+}
+.vectorFooterManyLines{
+  min-width: 954px;
+
+  bottom: -50px;
+  right: -494px;
+}
+ }
+
+
+@media (min-width: 768px) { 
+.container {
+  max-width: 700px;
+}
+ }
+.vectorFooterManyLines{
+  min-width: 954px;
+  min-height: 666px;
+  bottom: -50px;
+
+}
+
+@media (min-width: 992px) { 
+.container {
+  max-width: 860px;
+}
+.vectorFooterManyLines{
+min-width: 1148px;
+}
+.vectorBottomRight{
+  min-width: 636px;
+  min-height: 764px;
+  bottom: -81px;
+  right: -28px;
+
+}
+ }
+
+
+@media (min-width: 1200px) { 
+.container {
+  max-width: 1100px;
+}
+.vectorBottomRight{
+  min-width: 719px;
+  min-height: 864px;
+  bottom: -81px;
+  right: -28px;
+
+}
+ }
+
+
+@media (min-width: 1400px) { 
+  .container {
+  max-width: 1311px;
+}
+.vectorFooterManyLines{
+min-width: 1148px;
+bottom: 0px;
+    right: -296px;
+}
+.vectorBottomRight{
+  min-width: 850px;
+  min-height: 1064px;
+  bottom: -81px;
+  right: -28px;
+
+}
+ }
+
+
+
+
+
+
 
 </style>

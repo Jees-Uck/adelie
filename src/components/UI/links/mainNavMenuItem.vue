@@ -19,6 +19,12 @@ const props = defineProps({
 
 <style scoped>
 a {
+
+    font-family: gilroyregular;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   cursor: pointer;
 }
 

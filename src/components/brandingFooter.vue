@@ -5,7 +5,7 @@
 <template>
 <div>
 <a href="">
-    <img class="logoFooter" src="public\logoFooter.svg" alt="">
+    <img class="logoFooter" src="src/assets/icons/logoFooter.svg" alt="logo">
 </a>
 
 </div>

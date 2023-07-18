@@ -27,11 +27,28 @@ z-index: 3;
 }
 .navitem {
 color: #FFF;
-font-family: Gilroy;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
 
+}
+/*Медіазапити*/
+
+@media (min-width: 576px) { 
+}
+@media (min-width: 768px) { 
+  
+}
+@media (min-width: 992px) { 
+.mainNav{
+width: 300px; 
+}
+}
+@media (min-width: 1200px) { 
+.mainNav{
+width: 260px; 
+}
+}
+@media (min-width: 1400px) { 
+.mainNav{
+width: 332px;  
+}
+}
 </style>

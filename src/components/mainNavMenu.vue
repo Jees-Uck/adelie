@@ -17,10 +17,16 @@ import NavMenuItem from "../components/UI/links/mainNavMenuItem.vue";
 </script>
 <style scoped>
 .mainNav{
-width: 332px;
-height: 23px;  
+  display: none;
+  width: 355px;
+  height: 23px;  
 }
-
+@media (min-width: 768px) {
+.mainNav{
+  width: 332px;
+  height: 23px;  
+}
+}
 .navlist {
 display: flex;
 list-style: none;
@@ -29,14 +35,13 @@ align-items: center;
 align-content: center;
 }
 .navitem {
-color: #000;
-font-family: Gilroy;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-  cursor: pointer;
   z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .mainNav {
+    display: block;
+  }
 }
 
 </style>
