@@ -16,7 +16,7 @@
     display: block;
     width: 133px;
     height: 32px;
-    margin-left: 23px;
+    margin-left: 21px;
 }
 
 @media (min-width: 768px) {

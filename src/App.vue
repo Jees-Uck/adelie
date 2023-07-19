@@ -5,14 +5,16 @@ import Footer from './layouts/footer.vue'
 
 <template>
 <div class="wrap">
-  <div class="topManyLines"></div>
-  <Header/>
-  <div class="vectorFooterManyLines">
+  <div class="forPage">
+    <div class="topManyLines"></div>
+    <Header/>
+    <!-- <div class="vectorFooterManyLines">
+    </div> -->
+    <router-view></router-view>
+    <!-- <div class="vectorBottomRight"></div> -->
   </div>
-  <div class="vectorBottomRight"></div>
-</div>
   <Footer/>
-
+</div>
 </template>
 
 <style>
@@ -22,21 +24,24 @@ import Footer from './layouts/footer.vue'
   -moz-osx-font-smoothing: grayscale;
   color: #000;
   line-height: 1.8em;
+
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
 body {
-    height: 100%;
-
   background: #FFF;
-
   margin: 0;
-  overflow: hidden;
-}
+  height: 100%;
 
+}
+footer {
+    flex-shrink: 0;
+
+}
 /*Шрифти*/
 @font-face {
     font-family: 'gilroylight';/*300*/
@@ -67,12 +72,31 @@ body {
 
 }
 
-
 .wrap{
-  min-height: 100%;
+    display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-h1, h2, h3, h4 {
-  font-family: Oswald-Bold, sans-serif;
+.forPage{
+    min-height: 100%;
+  position: relative;
+}
+h1{
+font-family: gilroyregular;
+ font-weight: 400;
+}
+h2{
+font-family: gilroylight;
+font-weight: 300;
+ color: #000;
+font-size: 35px;
+font-style: normal;
+line-height: 55px;
+}
+h3{
+  font-family: gilroylight;
+  font-weight: 300;
+
 }
 img {
   max-width: 100%;
@@ -86,11 +110,8 @@ button{
   cursor: pointer;
 }
 .container {
-  width: 100%;
-  display: block;
   max-width: 355px;
   margin: 0 auto;
-  padding: 0 10px;
   height: 100%;
 }
 .container:after {

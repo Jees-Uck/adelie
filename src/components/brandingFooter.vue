@@ -14,7 +14,7 @@
 <style scoped>
 .logoFooter{
     display: block;
-    width: 169px;
+    width: 139px;
     height: 41px;
 }
 </style>

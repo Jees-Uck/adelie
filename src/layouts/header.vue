@@ -30,7 +30,7 @@ import BurgerMenu from '../components/UI/burgerMenu.vue'
 
 .top {
   position: relative;
-  height: 41px;
+  height: 32px;
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -41,5 +41,14 @@ import BurgerMenu from '../components/UI/burgerMenu.vue'
   display: flex;
   gap: 22px;
   align-items: center;
+}
+
+@media (min-width: 768px) { 
+.navWrap {
+  gap: 102px;
+}
+ }
+ .top {
+  height: 41px;
 }
 </style>

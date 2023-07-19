@@ -5,37 +5,37 @@ import FooterNavMenu from '../components/footerNavMenu.vue'
 
 <template>  
   <footer class="footer">
-    <div class="vectorFooterMain"></div>
-    <div class="container">
-      <div class="footerMenuBox">
-        <div class="bottom">
-          <div class="footerLogoWrap">
-            <BrandingFooter/>
-            <p class="reserved">© 2023 All rights reserved</p>
+      <div class="container">
+        <div class="footerMenuBox">
+          <div class="bottom">
+            <div class="footerLogoWrap">
+              <BrandingFooter/>
+              <p class="reserved">© 2023 All rights reserved</p>
+            </div>
+            <FooterNavMenu/>
           </div>
-          <FooterNavMenu/>
         </div>
       </div>
-    </div>
+
   </footer>
 </template>
 
-<style scoped>
+<style >
 footer {
-  position: absolute;
-  bottom: 0;
-  height: 364px;
-  min-width: 100%;
+  background-image: url('src/assets/vectors/globalVectors/footerMainVector.svg');
+background-repeat: no-repeat;
+padding-top: 184px;
+    min-width: 100%;
+    height: 364px;
+ background-position: -468px 10px;
 }
+
 .footerMenuBox{
   display: flex;
-  position: relative;
   height: 100%;
   justify-content: center;
 }
 .bottom {
-  position: absolute;
-  bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,28 +43,19 @@ footer {
 
 }
 
-.vectorFooterMain {
-  background-image: url('src/assets/vectors/globalVectors/footerMainVector.svg');
-  background-repeat: no-repeat;
-  min-width: 1755px;
-  min-height: 364px;
-  z-index: 0;
-  position: absolute;
-  left: -468px;
-  bottom: -10px;
-  overflow: hidden;
-}
+
 
 .footerLogoWrap {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
   flex-direction: column;
   gap: 31px;
   text-align: center;
 }
 
 .reserved {
+  position: relative;
   color: #FFF;
   font-family: gilroyregular;
   font-size: 16px;
