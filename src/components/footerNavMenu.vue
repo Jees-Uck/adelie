@@ -1,9 +1,9 @@
 <template>
-    <nav class="mainNav">
-        <ul class="navlist">
-        <NavMenuItem  class="navitem" :navmenu="{ title: 'Home' }" />
-        <NavMenuItem  class="navitem" :navmenu="{ title: 'Blog' }" />
-        <NavMenuItem  class="navitem" :navmenu="{ title: 'Contact' }" />
+    <nav class="mainNavFooter">
+        <ul class="navlistFooter">
+        <NavMenuItem  class="navitemFooter" :navmenu="{ title: 'Home' }" />
+        <NavMenuItem  class="navitemFooter" :navmenu="{ title: 'Blog' }" />
+        <NavMenuItem  class="navitemFooter" :navmenu="{ title: 'Contact' }" />
         </ul>
   </nav>
 </template>
@@ -12,12 +12,12 @@ import NavMenuItem from "../components/UI/links/mainNavMenuItem.vue";
 
 </script>
 <style scoped>
-.mainNav{
+.mainNavFooter{
 width: 332px;
 height: 23px;  
 }
 
-.navlist {
+.navlistFooter {
 display: flex;
 list-style: none;
 justify-content: space-between;
@@ -25,7 +25,7 @@ align-items: center;
 align-content: center;
 z-index: 3;
 }
-.navitem {
+.navitemFooter {
 color: #FFF;
 
 }
@@ -37,17 +37,17 @@ color: #FFF;
   
 }
 @media (min-width: 992px) { 
-.mainNav{
+.mainNavFooter{
 width: 300px; 
 }
 }
 @media (min-width: 1200px) { 
-.mainNav{
+.mainNavFooter{
 width: 260px; 
 }
 }
 @media (min-width: 1400px) { 
-.mainNav{
+.mainNavFooter{
 width: 332px;  
 }
 }

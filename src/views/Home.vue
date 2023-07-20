@@ -4,6 +4,7 @@
  <template>
 
         <div class="container">
+                <div class="bannerMainLine"></div>
             <div class="homeMainTitle">
                 <h1 class="flexForh1">
                     <span dividerH1>              
@@ -23,26 +24,39 @@
                 </h3>
             </div>
             <div class="homeFirstBanner">
-                <div class="homeFirstBannerH2Box">
+                <div class="homeFirstBannerTextBox">
                     <h2 class="h2Relative">
                         Unlock the Power of <span class="Optimal">Optimal</span> <span class="Solution">Solutions</span> for Your Business with Us!
-                    </h2>
-                </div>
+                    </h2>                    
+                    <p class="firstBannerText">
+                        We specialize in delivering top-notch e-commerce development solutions tailored to meet your unique business needs. With our extensive experience and deep understanding of the ever-evolving online marketplace, we are committed to helping you achieve unprecedented success.
+                    </p>
 
-                <p class="firstBannerText">
-                    We specialize in delivering top-notch e-commerce development solutions tailored to meet your unique business needs. With our extensive experience and deep understanding of the ever-evolving online marketplace, we are committed to helping you achieve unprecedented success.
-                </p>
-            <div class="homeFirstBannerImageBox">
-                <img src="" alt="">
+                </div>
+                <div class="homeFirstBannerImageBox">
+
+                        <img class="bannerBackground" src="src/assets/vectors/bannerBackground.svg" alt="">
+                        <img class="bannerBackground bannerPeoples" src="src/assets/vectors/homeFirstBanner.svg" alt="">
+
+                </div>
             </div>
-        </div>
         </div>
         
 
  </template>
 
  <style scoped>
-
+.bannerMainLine{
+  background-image: url('src/assets/vectors/globalVectors/mainBannerLine.svg');
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 267px;
+  height: 164px;
+  top: 278px;
+  right: 50%;
+  transform: translateX(50%);
+}
  .homeMainTitle{
     padding-top: 35px;
     display: flex;
@@ -57,6 +71,8 @@
     align-items: center;
     gap: 21px;
     min-width: 355px;
+    min-height: 81px;
+    max-height: 81px;
  }
  .dividerH1{
     display: flex;
@@ -90,11 +106,16 @@ color: #000;
     padding-top: 89px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    min-width: 354px;
+    gap: 33px;
+    min-width: 100%;
 }
-.homeFirstBannerH2Box{
-    height: 169px;
+.homeFirstBannerTextBox{
+    min-height: 169px;
+    max-width: 709px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
 }
 .firstBannerText{
     color: #000;
@@ -103,6 +124,7 @@ font-size: 18px;
 font-style: normal;
 font-weight: 300;
 line-height: 27px;
+
 
 }
 .h2Relative{
@@ -120,38 +142,125 @@ background-position: revert;
 background-position: revert;
 }
 
+.homeFirstBannerImageBox{
+    padding-top: 33px;
+    min-width: 355px;
+    display: flex;
+    min-height: 311px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bannerBackground{
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: contain; 
+  top: 0;
+  left: 0;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
 /*Медіазапити*/
 
 @media (min-width: 576px) { 
 h1{
-font-size: 42px;
+    font-size: 42px;
 }
- }
-
+h2{
+    text-align: center;
+}
+.homeFirstBannerImageBox{
+    min-width: 400px;
+}
+h3{
+    font-size: 22px;
+}
+}
 
 @media (min-width: 768px) { 
 h1{
-font-size: 46px;
+    font-size: 46px;
 }
 }
 
 @media (min-width: 992px) { 
 h1{
-font-size: 50px;
+    font-size: 50px;
 }
+h2{
+    font-size: 40px;
+    text-align: unset;
+}
+.flexForh1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 21px;
+    min-width: 355px;
+}
+.homeMainTitle {
+    padding-top: 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.firstBannerText{
+    font-size: 20px;
+    line-height: 35px;
+}
+.homeFirstBannerTextBox{
+    padding: 60px 0 80px 0;
+     display: flex;
+    flex-direction: column;
+    gap: 62px;
+}
+.homeFirstBanner{
+    flex-direction: row;
+}
+.bannerPeoples{
+    padding: 65px 0;
+}
+.homeFirstBannerImageBox{
+    min-width: 400px;
+}
+ .flexForh1{
+    flex-direction: row;
  }
-
+}
 
 @media (min-width: 1200px) { 
 h1{
 font-size: 58px;
 }
- }
-
+h2{
+    font-size: 50px;
+ line-height: 70px
+}
+h3{
+    font-size: 20px;
+}
+}
 
 @media (min-width: 1400px) { 
 h1{
-font-size: 70px;
+    font-size: 70px;
 }
- }
+h3{
+    font-size: 23px;
+}
+.bannerBackground {
+    min-width: 582px;
+    min-height: 381px;
+}
+h3{
+    font-size: 25px;
+    line-height: 35px;
+}
+}
  </style>

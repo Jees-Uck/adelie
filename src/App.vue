@@ -7,10 +7,20 @@ import Footer from './layouts/footer.vue'
 <div class="wrap">
   <div class="forPage">
     <div class="topManyLines"></div>
-    <Header/>
+    <div class="topCircle"></div>
+
+    <!--Plus-->
+    <div class="h1linesLeft"></div>
+    <div class="h1linesRight"></div>
+    <div class="mainPlus mainPlus1"></div>
+    <div class="mainPlus mainPlus2"></div>
+    <div class="mainPlus mainPlus3"></div>
+    <!--Plus-->
+
+          <Header/>
     <!-- <div class="vectorFooterManyLines">
     </div> -->
-    <router-view></router-view>
+          <router-view></router-view>
     <!-- <div class="vectorBottomRight"></div> -->
   </div>
   <Footer/>
@@ -39,72 +49,69 @@ body {
 
 }
 footer {
-    flex-shrink: 0;
+  flex-shrink: 0;
 
 }
 /*Шрифти*/
 @font-face {
-    font-family: 'gilroylight';/*300*/
-    src: url('src/fonts/gilroy-light-webfont.woff2') format('woff2'),
-         url('src/fonts/gilroy-light-webfont.woff') format('woff'),
-         url('src/fonts/gilroy-light-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'gilroymedium';/*500*/
-    src: url('src/fonts/gilroy-medium-webfont.woff2') format('woff2'),
-         url('src/fonts/gilroy-medium-webfont.woff') format('woff'),
-         url('src/fonts/gilroy-medium-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'gilroylight';/*300*/
+  src: url('src/fonts/gilroy-light-webfont.woff2') format('woff2'),
+      url('src/fonts/gilroy-light-webfont.woff') format('woff'),
+      url('src/fonts/gilroy-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 
 }
 @font-face {
-    font-family: 'gilroyregular'; /*400*/
-    src: url('src/fonts/gilroy-regular-webfont.woff2') format('woff2'),
-         url('src/fonts/gilroy-regular-webfont.woff') format('woff'),
-         url('src/fonts/gilroy-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'gilroymedium';/*500*/
+  src: url('src/fonts/gilroy-medium-webfont.woff2') format('woff2'),
+        url('src/fonts/gilroy-medium-webfont.woff') format('woff'),
+        url('src/fonts/gilroy-medium-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 
 }
-
+@font-face {
+  font-family: 'gilroyregular'; /*400*/
+  src: url('src/fonts/gilroy-regular-webfont.woff2') format('woff2'),
+        url('src/fonts/gilroy-regular-webfont.woff') format('woff'),
+        url('src/fonts/gilroy-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .wrap{
-    display: flex;
+  display: flex;
   flex-direction: column;
   height: 100%;
 }
 .forPage{
-    min-height: 100%;
+  min-height: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 h1{
-font-family: gilroyregular;
- font-weight: 400;
+  font-family: gilroyregular;
+  font-weight: 400;
 }
 h2{
-font-family: gilroylight;
-font-weight: 300;
- color: #000;
-font-size: 35px;
-font-style: normal;
-line-height: 55px;
+  font-family: gilroylight;
+  font-weight: 300;
+  color: #000;
+  font-size: 35px;
+  font-style: normal;
+  line-height: 55px;
 }
 h3{
   font-family: gilroylight;
   font-weight: 300;
-
 }
 img {
   max-width: 100%;
   height: auto;
 }
 ul{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 button{
   cursor: pointer;
@@ -119,23 +126,76 @@ button{
 }
 
 /* VECTORS */
+.h1linesLeft{
+    display: none;
+  background-image: url('src/assets/vectors/globalVectors/h1linesLeft.svg');
+  position: absolute;
+  width: 190px;
+  height: 182px;
+  top: 144px;
+  left: 272px;
+  
+}
+.h1linesRight{
+  display: none;
+  background-image: url('src/assets/vectors/globalVectors/h1linesRight.svg');
+  position: absolute;
+  width: 177px;
+  height: 164px;
+  top: 153px;
+  right: 287px;
+  
+}
+.mainPlus{
+  display: block;
+  background-image: url('src/assets/vectors/globalVectors/mainPlus.svg');
+  position: absolute;
+  height: 8px;
+  width: 8px;
+}
+.mainPlus1{
+
+right: 167px;
+top: 67px;
+}
+.mainPlus2{
+display: none;
+}
+.mainPlus3{
+display: none;
+}
+
 .topManyLines{
-    background-image: url('src/assets/vectors/globalVectors/topManyLines.svg');
-      background-size: cover;
+  background-image: url('src/assets/vectors/globalVectors/topManyLines.svg');
+  background-size: cover;
   background-position: center;
   position: absolute;
   min-width: 199px;
   min-height: 109px;
   top: -34px;
   left: -100px;
-transform: rotate(-9.87deg);
+  transform: rotate(-9.87deg);
 }
+.topCircle{
+display: none;
+  background-image: url('src/assets/vectors/globalVectors/topCircle.svg');
+  background-size: cover;
+  background-position: center top; 
+  background-repeat: no-repeat;
+  position: absolute;
+  min-width: 215px;
+  min-height: 215px;
+  max-width: 215px;
+  max-height: 215px;
+  right: -26px;
+  top: -67px;
+}
+
 .vectorFooterManyLines{
   background-image: url('src/assets/vectors/globalVectors/VectorBottomRightManyLines.svg');
   background-size: cover;
   background-position: center;
   min-width: 954px;
-
   z-index: 0;
   position: absolute;
   bottom: -50px;
@@ -146,25 +206,23 @@ transform: rotate(-9.87deg);
 }
 .vectorFooterManyLines::before{
   content: '';
-position: absolute;
-background-image: url('src/assets/vectors/globalVectors/plus.svg');
-width: 8px;
-height: 8px;
-top: 173px;
-left: 305px;
-
-
+  position: absolute;
+  background-image: url('src/assets/vectors/globalVectors/plus.svg');
+  width: 8px;
+  height: 8px;
+  top: 173px;
+  left: 305px;
 }
 .vectorBottomRight{
   background-image: url('src/assets/vectors/globalVectors/VectorBottomRight.svg');
-    background-size: cover;
+  background-size: cover;
   background-position: center;
-    min-width: 331px;
+  min-width: 331px;
   min-height: 395px;
   z-index: 0;
   position: absolute;
-bottom: 79px;
-right: -18px;
+  bottom: 79px;
+  right: -18px;
   overflow: hidden;
 }
 
@@ -176,31 +234,34 @@ right: -18px;
 }
 .vectorFooterManyLines{
   min-width: 954px;
-
   bottom: -50px;
   right: -494px;
 }
  }
 
-
 @media (min-width: 768px) { 
 .container {
   max-width: 700px;
 }
- }
+ .topManyLines{
+  min-width: 220px;
+  min-height: 150px;
+  left: -144px;
+  top: -33px;
+}
+
 .vectorFooterManyLines{
   min-width: 954px;
   min-height: 666px;
   bottom: -50px;
-
 }
-
+}
 @media (min-width: 992px) { 
 .container {
   max-width: 860px;
 }
 .vectorFooterManyLines{
-min-width: 1148px;
+  min-width: 1148px;
 }
 .vectorBottomRight{
   min-width: 636px;
@@ -209,7 +270,14 @@ min-width: 1148px;
   right: -28px;
 
 }
+.topManyLines{
+  min-width: 300px;
+  min-height: 200px;
+  left: -144px;
+  top: -33px;
+}
  }
+
 
 
 @media (min-width: 1200px) { 
@@ -221,19 +289,64 @@ min-width: 1148px;
   min-height: 864px;
   bottom: -81px;
   right: -28px;
-
+}
+.topManyLines{
+  min-width: 400px;
+  min-height: 209px;
+  left: -165px;
+  top: -33px;
+}
+.topCircle{
+display: block;
+  min-width: 180px;
+  min-height: 180px;
+  max-width: 215px;
+  max-height: 215px;
+  right: -26px;
+  top: -67px;
+}
+.h1linesLeft{
+  display: block;
+  left: 20px;
+}
+.h1linesRight{
+  display: block;
+  right: 50px;
 }
  }
 
 
 @media (min-width: 1400px) { 
   .container {
-  max-width: 1311px;
+  max-width: 1300px;
 }
+.h1linesLeft{
+  display: block;
+  left: 50px;
+}
+.h1linesRight{
+  display: block;
+  right: 50px;
+}
+.mainPlus1{
+right: 111px;
+top: 56px;
+}
+.mainPlus2{
+display: block;
+left: 618px;
+top: 56px;
+}
+.mainPlus3{
+display: block;
+right: 826px;
+top: 68px;
+}
+
 .vectorFooterManyLines{
-min-width: 1148px;
-bottom: 0px;
-    right: -296px;
+  min-width: 1148px;
+  bottom: 0px;
+  right: -296px;
 }
 .vectorBottomRight{
   min-width: 850px;
@@ -242,8 +355,40 @@ bottom: 0px;
   right: -28px;
 
 }
+.topManyLines{
+  min-width: 450px;
+  min-height: 259px;
+  left: -165px;
+  top: -33px;
+}
+.topCircle{
+display: block;
+  min-width: 215px;
+  min-height: 215px;
+  max-width: 215px;
+  max-height: 215px;
+  right: -26px;
+  top: -67px;
+}
  }
-
+@media (min-width: 1920px) { 
+  .h1linesLeft{
+  display: block;
+  top: 144px;
+  left: 272px;
+}
+.h1linesRight{
+  display: block;
+  top: 153px;
+  right: 287px;
+}
+.topManyLines{
+  min-width: 562px;
+  min-height: 309px;
+  left: -165px;
+  top: -33px;
+}
+ }
 
 
 

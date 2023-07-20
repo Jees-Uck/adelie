@@ -43,8 +43,6 @@ padding-top: 184px;
 
 }
 
-
-
 .footerLogoWrap {
   display: flex;
   align-items: center;
@@ -75,6 +73,9 @@ padding-top: 184px;
   
 }
 @media (min-width: 992px) { 
+  .footerMenuBox{
+  justify-content: flex-start;
+}
   .bottom {
   flex-direction: row;
   gap: 159px;
@@ -84,17 +85,44 @@ padding-top: 184px;
 }
 }
 @media (min-width: 1200px) { 
+    footer {
+ background-position: -158px 10px;
+}
     .bottom {
   gap: 100px;
 }
 }
 @media (min-width: 1400px) { 
-  .vectorFooterMain {
-  left: -158px;
-  bottom: -10px;
+  footer {
+ background-position: -158px 10px;
 }
   .bottom {
   gap: 159px;
+}
+}
+@media (min-width: 1920px) { 
+  footer{
+    position: relative;
+  }
+  .footerLogoWrap{
+position: absolute;
+    bottom: 91px;
+    left: 322px;
+}
+.mainNavFooter{
+    width: 332px;
+    position: absolute;
+    width: 332px;
+    display: flex;
+    width: 332px;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 30px;
+    left: 863px;
+    bottom: 90px;
+}
+.navlistFooter {
+    width: 100%;
 }
 }
 </style>

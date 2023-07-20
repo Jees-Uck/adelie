@@ -24,14 +24,15 @@ import BurgerMenu from '../components/UI/burgerMenu.vue'
 
 <style scoped>
 .header {
+    padding-top: 20px;
   width: 100%;
   z-index: 1;
 }
 
 .top {
   position: relative;
-  height: 32px;
-  margin-top: 20px;
+  min-height: 32px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,5 +51,15 @@ import BurgerMenu from '../components/UI/burgerMenu.vue'
  }
  .top {
   height: 41px;
+}
+@media (min-width: 768px) { 
+.top {
+  justify-content: space-around;
+}
+}
+@media (min-width: 1920px) { 
+.top {
+  justify-content: space-between;
+}
 }
 </style>
