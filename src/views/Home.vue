@@ -1,5 +1,5 @@
 <script setup>
-
+import HomeAccordion from '../components/homeAccordion.vue'
 </script>
  <template>
 
@@ -40,6 +40,7 @@
 
                 </div>
             </div>
+            <HomeAccordion/>
         </div>
         
 
