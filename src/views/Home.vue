@@ -1,5 +1,21 @@
 <script setup>
 import HomeAccordion from '../components/homeAccordion.vue'
+import circularSlider from '../components/circularSlider.vue'
+import { ref, onMounted, onUnmounted } from "vue";
+
+const screenWidth = ref(window.innerWidth);
+
+const updateScreenWidth = () => {
+  screenWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", updateScreenWidth);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateScreenWidth);
+});
 </script>
  <template>
 
@@ -40,7 +56,8 @@ import HomeAccordion from '../components/homeAccordion.vue'
 
                 </div>
             </div>
-            <HomeAccordion/>
+            <HomeAccordion v-if="screenWidth <= 1200"/>
+            <circularSlider v-else />
         </div>
         
 

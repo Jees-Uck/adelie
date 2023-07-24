@@ -50,14 +50,13 @@ for (const item of accordionItems.value) {
 </script>
 <template>
   <div class="accordion">
-    <div
-      v-for="(item, index) in accordionItems"
-      :key="index"
-      class="accordionItem"
-    >
+    <div v-for="(item, index) in accordionItems" :key="index" class="accordionItem">
+      <div class="accordionLine"></div>
       <button class="accordionHeader" @click="toggleAccordion(index)">
         {{ item.header }}
-        <div class="accordionButtonPlus"></div>
+        <div class="accordionButton" :class="{ active: item.active }">
+          {{ item.active ? "-" : "+" }}
+        </div>
       </button>
       <div class="accordionContent" v-if="item.active">
         <h3 class="contentHeader">
@@ -66,9 +65,13 @@ for (const item of accordionItems.value) {
         </h3>
         <p class="contentText">{{ item.content }}</p>
       </div>
+      
     </div>
+    <div class="accordionLine"></div>
   </div>
 </template>
+
+
 <style>
 .accordion {
   padding-top: 51px;
@@ -84,9 +87,42 @@ for (const item of accordionItems.value) {
   font-weight: 300;
   line-height: 25px;
   text-align: start;
-  padding: 34px 0 0 0;
+  height: 35px;
   background-color: transparent;
   border: none;
+  padding: 38px 0;
+}
+.accordionButton {
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  border-radius: 50%;
+  background-color: #F1F1F1;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  color: #000;
+  cursor: pointer;
+  font-family: gilroymedium;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+
+.accordionButton.active {
+  background-color: #050505;
+  color: #fff;
+  border-color: transparent;
+}
+.accordionLine {
+  width: 100%;
+  height: 1px;
+  opacity: 0.1;
+  background: #000;
+  margin: 10px 0;
 }
 .contentHeader {
   color: #000;
@@ -100,6 +136,7 @@ for (const item of accordionItems.value) {
 .first-word {
   position: relative;
   z-index: 2;
+
 }
 
 .first-word::after {
