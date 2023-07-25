@@ -1,6 +1,7 @@
 <script setup>
 import HomeAccordion from '../components/homeAccordion.vue'
 import circularSlider from '../components/circularSlider.vue'
+import ContactForm from '../components/contactForm.vue'
 import { ref, onMounted, onUnmounted } from "vue";
 
 const screenWidth = ref(window.innerWidth);
@@ -17,63 +18,75 @@ onUnmounted(() => {
   window.removeEventListener("resize", updateScreenWidth);
 });
 </script>
- <template>
 
-        <div class="container">
-                <div class="bannerMainLine"></div>
-            <div class="homeMainTitle">
-                <h1 class="flexForh1">
-                    <span dividerH1>              
-                        <span class="h1Adelie">
-                            Adelie
-                        </span>
-                        <span class="h1Commerce">
-                            E-commerce
-                        </span>
-                    </span>                 
-                    <span>
-                    Solutions
-                    </span>
-                </h1>
-                <h3>
-                    Empower Your Online Business with Expert E-commerce Solutions
-                </h3>
-            </div>
-            <div class="homeFirstBanner">
-                <div class="homeFirstBannerTextBox">
-                    <h2 class="h2Relative">
-                        Unlock the Power of <span class="Optimal">Optimal</span> <span class="Solution">Solutions</span> for Your Business with Us!
-                    </h2>                    
-                    <p class="firstBannerText">
-                        We specialize in delivering top-notch e-commerce development solutions tailored to meet your unique business needs. With our extensive experience and deep understanding of the ever-evolving online marketplace, we are committed to helping you achieve unprecedented success.
-                    </p>
-
-                </div>
-                <div class="homeFirstBannerImageBox">
-
-                        <img class="bannerBackground" src="src/assets/vectors/bannerBackground.svg" alt="">
-                        <img class="bannerBackground bannerPeoples" src="src/assets/vectors/homeFirstBanner.svg" alt="">
-
-                </div>
-            </div>
-            <HomeAccordion v-if="screenWidth <= 1200"/>
-            <circularSlider v-else />
+<template>
+<div class="container">
+    <div class="bannerMainLine"></div>
+    <div class="homeMainTitle">
+        <h1 class="flexForh1">
+            <span dividerH1>              
+                <span class="h1Adelie">
+                    Adelie
+                </span>
+                <span class="h1Commerce">
+                    E-commerce
+                </span>
+            </span>                 
+            <span>
+            Solutions
+            </span>
+        </h1>
+        <h3>
+            Empower Your Online Business with Expert E-commerce Solutions
+        </h3>
+    </div>
+    <div class="homeBanner">
+        <div class="homeBannerTextBox">
+            <h2>
+                Unlock the Power of 
+                <span class="dashedWord">Optimal</span> <span class="dashedWord">Solutions</span> 
+                for Your Business with Us!
+            </h2>                    
+            <p class="BannerText">
+                We specialize in delivering top-notch e-commerce development solutions tailored to meet your unique business needs. With our extensive experience and deep understanding of the ever-evolving online marketplace, we are committed to helping you achieve unprecedented success.
+            </p>
         </div>
-        
+        <div class="homeBannerImageBox">
+                <img class="bannerBackground" src="src/assets/vectors/bannerBackground.svg" alt="">
+                <img class="bannerPeoples" src="src/assets/vectors/homeFirstBanner.svg" alt="">
+        </div>
+    </div>
+    <HomeAccordion v-if="screenWidth <= 1200"/>
+    <circularSlider v-else />
+    <div class="homeBanner">
+        <div class="homeBannerTextBox">
+            <h2>
+                <span class="dashedWord">Who</span> <span class="dashedWord">will</span> will do it for you?
+            </h2>                    
+            <p class="BannerText">
+                Our team of skilled developers, designers, and strategists work collaboratively to create user-friendly and visually stunning e-commerce platforms that captivate your customers and drive conversions. Leveraging the latest technologies and industry best practices, we ensure seamless integration, robust security, and optimal performance.
+            </p>
+        </div>
+        <div class="homeBannerImageBox">
+                <img class="bannerBackground" src="src/assets/vectors/bannerBackground.svg" alt="">
+                <img class=" bannerManWithImages" src="src/assets/vectors/homeSecondBanner.svg" alt="">
+        </div>
+    </div>
+    <ContactForm/>
+</div>
+</template>
 
- </template>
-
- <style scoped>
+<style scoped>
 .bannerMainLine{
-  background-image: url('src/assets/vectors/globalVectors/mainBannerLine.svg');
-  position: absolute;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 267px;
-  height: 164px;
-  top: 278px;
-  right: 50%;
-  transform: translateX(50%);
+    background-image: url('src/assets/vectors/globalVectors/mainBannerLine.svg');
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 267px;
+    height: 164px;
+    top: 278px;
+    right: 50%;
+    transform: translateX(50%);
 }
  .homeMainTitle{
     padding-top: 35px;
@@ -101,33 +114,34 @@ h1{
 }
 h2{
     color: #000;
-font-size: 35px;
-font-style: normal;
-line-height: 55px;
+    font-size: 35px;
+    font-style: normal;
+    line-height: 55px;
 }
 h3{
     color: #000;
-text-align: center;
-font-size: 20px;
-font-weight: 300;
-line-height: 30px;
-max-height: 169px;
-min-height: 90px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    max-height: 169px;
+    min-height: 90px;
 }
 .h1Adelie{
-color: #4CF049;
+    color: #4CF049;
 }
 .h1Commerce{
-color: #000;
+    color: #000;
 }
-.homeFirstBanner{
+.homeBanner{
     padding-top: 89px;
     display: flex;
     flex-direction: column;
     gap: 33px;
     min-width: 100%;
+    justify-content: space-between;
 }
-.homeFirstBannerTextBox{
+.homeBannerTextBox{
     min-height: 169px;
     max-width: 709px;
     display: flex;
@@ -135,32 +149,36 @@ color: #000;
     gap: 12px;
 
 }
-.firstBannerText{
+.BannerText{
     color: #000;
-font-family: gilroylight;
-font-size: 18px;
-font-style: normal;
-font-weight: 300;
-line-height: 27px;
+    font-family: gilroylight;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 27px;
 
 
 }
-.h2Relative{
+
+.dashedWord{
+    display: inline-block;
     position: relative;
 }
-
-.Optimal{
-background-image: url('../assets/vectors/homeFirstOptimal.svg');
-background-size: 96% 155%;
-background-position: revert;
+.dashedWord::before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+    width: 100%;
+    height: 15px; 
+    background-color: #4CF049; 
+    z-index: -1;
 }
-.Solution{
- background-image: url('../assets/vectors/homeFirstSolution.svg');   
- background-size: 96% 155%;
-background-position: revert;
-}
 
-.homeFirstBannerImageBox{
+
+
+/*ПЕРЕРОБИТИ БАННЕРИ!*/
+.homeBannerImageBox{
     padding-top: 33px;
     min-width: 355px;
     display: flex;
@@ -171,15 +189,30 @@ background-position: revert;
 }
 
 .bannerBackground{
-  position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: contain; 
-  top: 0;
-  left: 0;
-  max-height: 100%;
-  max-width: 100%;
+    position: absolute;
+    min-width: 353px;
+    min-height: 348px;
+    object-fit: contain; 
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 1;
 }
+.bannerPeoples{
+    z-index: 2;
+    min-width: 355px;
+    min-height: 232px;
+    max-height: 100%;
+    max-width: 100%;
+}
+.bannerManWithImages{
+    z-index: 2;
+    min-width: 342px;
+    min-height: 250px;
+    max-height: 100%;
+    max-width: 100%;
+
+}
+/*ПЕРЕРОБИТИ БАННЕРИ!*/
 
 
 /*Медіазапити*/
@@ -191,7 +224,7 @@ h1{
 h2{
     text-align: center;
 }
-.homeFirstBannerImageBox{
+.homeBannerImageBox{
     min-width: 400px;
 }
 h3{
@@ -232,19 +265,19 @@ h2{
     font-size: 20px;
     line-height: 35px;
 }
-.homeFirstBannerTextBox{
+.homeBannerTextBox{
     padding: 60px 0 80px 0;
-     display: flex;
+    display: flex;
     flex-direction: column;
     gap: 62px;
 }
-.homeFirstBanner{
+.homeBanner{
     flex-direction: row;
 }
 .bannerPeoples{
     padding: 65px 0;
 }
-.homeFirstBannerImageBox{
+.homeBannerImageBox{
     min-width: 400px;
 }
  .flexForh1{
@@ -254,14 +287,17 @@ h2{
 
 @media (min-width: 1200px) { 
 h1{
-font-size: 58px;
+    font-size: 58px;
 }
 h2{
     font-size: 50px;
- line-height: 70px
+    line-height: 70px
 }
 h3{
     font-size: 20px;
+}
+.BannerText{
+    line-height: 35px;
 }
 }
 
@@ -273,8 +309,8 @@ h3{
     font-size: 23px;
 }
 .bannerBackground {
-    min-width: 582px;
-    min-height: 381px;
+    min-width: 519px;
+    min-height: 511px;
 }
 h3{
     font-size: 25px;

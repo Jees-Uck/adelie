@@ -29,24 +29,20 @@ import Footer from './layouts/footer.vue'
 
 <style>
 #app {
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #000;
   line-height: 1.8em;
-
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
 }
 body {
   background: #FFF;
   margin: 0;
   height: 100%;
-
 }
 footer {
   flex-shrink: 0;
@@ -79,15 +75,12 @@ footer {
   font-weight: normal;
   font-style: normal;
 }
-.wrap{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
+
 .forPage{
   min-height: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
+  padding-bottom: 49px;
 }
 h1{
   font-family: gilroyregular;
@@ -127,7 +120,7 @@ button{
 
 /* VECTORS */
 .h1linesLeft{
-    display: none;
+  display: none;
   background-image: url('src/assets/vectors/globalVectors/h1linesLeft.svg');
   position: absolute;
   width: 190px;
@@ -154,17 +147,15 @@ button{
   width: 8px;
 }
 .mainPlus1{
-
-right: 167px;
-top: 67px;
+  right: 167px;
+  top: 67px;
 }
 .mainPlus2{
-display: none;
+  display: none;  
 }
 .mainPlus3{
-display: none;
+  display: none;
 }
-
 .topManyLines{
   background-image: url('src/assets/vectors/globalVectors/topManyLines.svg');
   background-size: cover;
@@ -177,7 +168,7 @@ display: none;
   transform: rotate(-9.87deg);
 }
 .topCircle{
-display: none;
+  display: none;
   background-image: url('src/assets/vectors/globalVectors/topCircle.svg');
   background-size: cover;
   background-position: center top; 
@@ -278,8 +269,6 @@ display: none;
 }
  }
 
-
-
 @media (min-width: 1200px) { 
 .container {
   max-width: 1100px;
@@ -315,7 +304,6 @@ display: block;
 }
  }
 
-
 @media (min-width: 1400px) { 
   .container {
   max-width: 1300px;
@@ -329,18 +317,18 @@ display: block;
   right: 50px;
 }
 .mainPlus1{
-right: 111px;
-top: 56px;
+  right: 111px;
+  top: 56px;
 }
 .mainPlus2{
-display: block;
-left: 618px;
-top: 56px;
+  display: block;
+  left: 618px;
+  top: 56px;
 }
 .mainPlus3{
-display: block;
-right: 826px;
-top: 68px;
+  display: block;
+  right: 826px;
+  top: 68px;
 }
 
 .vectorFooterManyLines{
@@ -362,7 +350,7 @@ top: 68px;
   top: -33px;
 }
 .topCircle{
-display: block;
+  display: block;
   min-width: 215px;
   min-height: 215px;
   max-width: 215px;
@@ -389,10 +377,5 @@ display: block;
   top: -33px;
 }
  }
-
-
-
-
-
 
 </style>
