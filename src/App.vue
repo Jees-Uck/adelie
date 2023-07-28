@@ -1,31 +1,66 @@
 <script setup>
-import Header from './layouts/header.vue'
-import Footer from './layouts/footer.vue'
+import Header from "./layouts/header.vue";
+import Footer from "./layouts/footer.vue";
 </script>
 
 <template>
-<div class="wrap">
-  <div class="forPage">
-    <div class="topManyLines"></div>
-    <div class="topCircle"></div>
+  <div class="wrap">
+    <div class="forPage">
+      <span class="topManyLines"></span>
+      <span class="topCircle"></span>
 
-    <!--Plus-->
-    <div class="h1linesLeft"></div>
-    <div class="h1linesRight"></div>
-    <div class="mainPlus mainPlus1"></div>
-    <div class="mainPlus mainPlus2"></div>
-    <div class="mainPlus mainPlus3"></div>
-    <!--Plus-->
+      <span class="h1linesLeft"></span>
+      <span class="h1linesRight"></span>
+      <span class="threeGreenLines"></span>
+      <span class="midGreenCircle"></span>
+      <span class="midGreenCircleRightInMaxScreen"></span>
+      <!--Plus-->
+      <div class="forPluses">
+        <span class="mainPlus mainPlus1"></span>
+        <span class="mainPlus mainPlus2"></span>
+        <span class="mainPlus mainPlus3"></span>
+        <span class="mainPlus mainPlus4"></span>
+        <span class="mainPlus mainPlus5"></span>
+        <span class="mainPlus mainPlus6"></span>
+        <span class="mainPlus mainPlus7"></span>
+        <span class="mainPlus mainPlus8"></span>
+        <span class="mainPlus mainPlus9"></span>
+        <span class="mainPlus mainPlus10"></span>
+        <span class="mainPlus mainPlus11"></span>
+        <span class="mainPlus mainPlus12"></span>
+        <span class="mainPlus mainPlus13"></span>
 
-          <Header/>
-    <!-- <div class="vectorFooterManyLines">
-    </div> -->
-          <router-view></router-view>
-    <!-- <div class="vectorBottomRight"></div> -->
+        <span class="mainPlus mainPlus14"></span>
+        <span class="mainPlus mainPlus15"></span>
+        <span class="mainPlus mainPlus16"></span>
+        <span class="mainPlus mainPlus17"></span>
+        <span class="mainPlus mainPlus18"></span>
+        <span class="mainPlus mainPlus19"></span>
+        <span class="mainPlus mainPlus20"></span>
+        <span class="mainPlus mainPlus21"></span>
+        <span class="mainPlus mainPlus22"></span>
+        <span class="mainPlus mainPlus23"></span>
+        <span class="mainPlus mainPlus24"></span>
+        <span class="mainPlus mainPlus25"></span>
+        <span class="mainPlus mainPlus26"></span>
+        <span class="mainPlus mainPlus27"></span>
+        <span class="mainPlus mainPlus28"></span>
+        <span class="mainPlus mainPlus29"></span>
+        <span class="mainPlus mainPlus30"></span>
+        <span class="mainPlus mainPlus21"></span>
+      </div>
+      <!--Plus-->
+
+      <Header />
+    </div>
+    <router-view></router-view>
+    <div class="vectorBottomRight"></div>
+    <div class="vectorFooterManyLines"></div>
+
+    <Footer />
   </div>
-  <Footer/>
-</div>
 </template>
+
 
 <style>
 #app {
@@ -40,61 +75,58 @@ import Footer from './layouts/footer.vue'
   box-sizing: border-box;
 }
 body {
-  background: #FFF;
+  background: #fff;
   margin: 0;
   height: 100%;
 }
 footer {
   flex-shrink: 0;
-
 }
 /*Шрифти*/
 @font-face {
-  font-family: 'gilroylight';/*300*/
-  src: url('src/fonts/gilroy-light-webfont.woff2') format('woff2'),
-      url('src/fonts/gilroy-light-webfont.woff') format('woff'),
-      url('src/fonts/gilroy-light-webfont.ttf') format('truetype');
+  font-family: "gilroylight"; /*300*/
+  src: url("src/fonts/gilroy-light-webfont.woff2") format("woff2"),
+    url("src/fonts/gilroy-light-webfont.woff") format("woff"),
+    url("src/fonts/gilroy-light-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-
 }
 @font-face {
-  font-family: 'gilroymedium';/*500*/
-  src: url('src/fonts/gilroy-medium-webfont.woff2') format('woff2'),
-        url('src/fonts/gilroy-medium-webfont.woff') format('woff'),
-        url('src/fonts/gilroy-medium-webfont.ttf') format('truetype');
+  font-family: "gilroymedium"; /*500*/
+  src: url("src/fonts/gilroy-medium-webfont.woff2") format("woff2"),
+    url("src/fonts/gilroy-medium-webfont.woff") format("woff"),
+    url("src/fonts/gilroy-medium-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-
 }
 @font-face {
-  font-family: 'gilroyregular'; /*400*/
-  src: url('src/fonts/gilroy-regular-webfont.woff2') format('woff2'),
-        url('src/fonts/gilroy-regular-webfont.woff') format('woff'),
-        url('src/fonts/gilroy-regular-webfont.ttf') format('truetype');
+  font-family: "gilroyregular"; /*400*/
+  src: url("src/fonts/gilroy-regular-webfont.woff2") format("woff2"),
+    url("src/fonts/gilroy-regular-webfont.woff") format("woff"),
+    url("src/fonts/gilroy-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
-.forPage{
-  min-height: 100%;
+.wrap {
   position: relative;
   overflow: hidden;
-  padding-bottom: 49px;
 }
-h1{
+.forPage {
+  min-height: 100%;
+}
+h1 {
   font-family: gilroyregular;
   font-weight: 400;
 }
-h2{
-  font-family: gilroylight;
+h2 {
+  font-family: gilroyregular;
   font-weight: 300;
   color: #000;
   font-size: 35px;
   font-style: normal;
   line-height: 55px;
 }
-h3{
+h3 {
   font-family: gilroylight;
   font-weight: 300;
 }
@@ -102,12 +134,16 @@ img {
   max-width: 100%;
   height: auto;
 }
-ul{
+ul {
   margin: 0;
   padding: 0;
 }
-button{
+button {
   cursor: pointer;
+}
+label {
+  margin: 0;
+  padding: 0;
 }
 .container {
   max-width: 355px;
@@ -119,59 +155,176 @@ button{
 }
 
 /* VECTORS */
-.h1linesLeft{
+.h1linesLeft {
   display: none;
-  background-image: url('src/assets/vectors/globalVectors/h1linesLeft.svg');
+  background-image: url("./assets/vectors/globalVectors/h1linesLeft.svg");
   position: absolute;
   width: 190px;
   height: 182px;
   top: 144px;
   left: 272px;
-  
 }
-.h1linesRight{
+.h1linesRight {
   display: none;
-  background-image: url('src/assets/vectors/globalVectors/h1linesRight.svg');
+  background-image: url("./src/assets/vectors/globalVectors/h1linesRight.svg");
   position: absolute;
   width: 177px;
   height: 164px;
   top: 153px;
   right: 287px;
-  
 }
-.mainPlus{
-  display: block;
-  background-image: url('src/assets/vectors/globalVectors/mainPlus.svg');
+.threeGreenLines{
+  position: absolute;
+  width: 111px;
+  height: 5px;
+  top: 769px;
+  right: 11px;
+  background-color: rgba(76, 240, 73, 1);
+  z-index: 2;
+}
+
+.threeGreenLines::before{
+  content: '';
+  position: absolute;
+  width: 111px;
+  height: 7px;
+  bottom: 14px;
+  right: 56px;
+  background-color: rgba(76, 240, 73, 1);
+}
+.threeGreenLines::after{
+  content: '';
+  position: absolute;
+  width: 111px;
+  height: 7px;
+  top: 14px;
+  right: 23px;
+  background-color: rgba(76, 240, 73, 1);
+}
+.midGreenCircle{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 5px solid rgba(76, 240, 73, 1);
+  border-radius: 50%;
+  top: 1090px;
+  left: 52px;
+  z-index: 0;
+}
+.midGreenCircleRightInMaxScreen{
+  display: none;
+}
+.forPluses {
+  position: absolute;
+  top: 67px;
+  left: 18px;
+  right: 13px;
+  bottom: 908px;
+  z-index: -1;
+}
+.mainPlus {
+  background-image: url("./src/assets/vectors/globalVectors/mainPlus.svg");
   position: absolute;
   height: 8px;
   width: 8px;
 }
-.mainPlus1{
-  right: 167px;
-  top: 67px;
+
+.mainPlus1 {
+  top: 0;
+  right: 154px;
 }
-.mainPlus2{
-  display: none;  
+.mainPlus2 {
+  top: 194px;
+  right: 0px;
 }
-.mainPlus3{
+.mainPlus3 {
+  top: 261px;
+  left: 77px;
+}
+
+.mainPlus4 {
+  top: 728px;
+  left: 32px;
+}
+.mainPlus5 {
+  top: 1043px;
+  right: 25px;
+}
+
+.mainPlus6 {
+  top: 1454px;
+  left: 34px;
+}
+.mainPlus7 {
+  top: 1741px;
+  right: 97px;
+}
+
+.mainPlus8 {
+  top: 1995px;
+  right: 149px;
+}
+.mainPlus9 {
+  top: 2111px;
+  left: 17px;
+}
+
+.mainPlus10 {
+  top: 2090px;
+  left: 0;
+}
+.mainPlus11 {
+  top: 2540px;
+  right: 98px;
+}
+.mainPlus12 {
+  top: 2849px;
+  left: 15px;
+}
+.mainPlus13 {
+  top: 2897px;
+  right: 24px;
+}
+
+.mainPlus14,
+.mainPlus15,
+.mainPlus16,
+.mainPlus17,
+.mainPlus18,
+.mainPlus19,
+.mainPlus20,
+.mainPlus21,
+.mainPlus22,
+.mainPlus23,
+.mainPlus24,
+.mainPlus25,
+.mainPlus26,
+.mainPlus27,
+.mainPlus28,
+.mainPlus29,
+.mainPlus30,
+.mainPlus31 {
   display: none;
 }
-.topManyLines{
-  background-image: url('src/assets/vectors/globalVectors/topManyLines.svg');
+
+.topManyLines {
+  background-image: url("./src/assets/vectors/globalVectors/topManyLines.svg");
   background-size: cover;
   background-position: center;
   position: absolute;
   min-width: 199px;
   min-height: 109px;
+  max-width: 805px;
+  max-height: 1064px;
   top: -34px;
   left: -100px;
   transform: rotate(-9.87deg);
 }
-.topCircle{
+.topCircle {
   display: none;
-  background-image: url('src/assets/vectors/globalVectors/topCircle.svg');
+  background-image: url("./src/assets/vectors/globalVectors/topCircle.svg");
   background-size: cover;
-  background-position: center top; 
+  background-position: center top;
   background-repeat: no-repeat;
   position: absolute;
   min-width: 215px;
@@ -182,200 +335,471 @@ button{
   top: -67px;
 }
 
-.vectorFooterManyLines{
-  background-image: url('src/assets/vectors/globalVectors/VectorBottomRightManyLines.svg');
-  background-size: cover;
+.vectorFooterManyLines {
+  background-image: url("./src/assets/vectors/globalVectors/VectorBottomRightManyLines.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   min-width: 954px;
-  z-index: 0;
+  max-width: 1148px;
+  min-height: 666px;
+  max-height: 801px;
+  z-index: -1;
   position: absolute;
   bottom: -50px;
   right: -494px;
   transform: rotate(-24.387deg);
-  overflow: hidden;
-
 }
-.vectorFooterManyLines::before{
-  content: '';
+
+.vectorFooterManyLines::before {
+  content: "";
   position: absolute;
-  background-image: url('src/assets/vectors/globalVectors/plus.svg');
+  background-image: url("./src/assets/vectors/globalVectors/plus.svg");
   width: 8px;
   height: 8px;
   top: 173px;
   left: 305px;
 }
-.vectorBottomRight{
-  background-image: url('src/assets/vectors/globalVectors/VectorBottomRight.svg');
+.vectorBottomRight {
+  background-image: url("./src/assets/vectors/globalVectors/VectorBottomRight.svg");
   background-size: cover;
   background-position: center;
   min-width: 331px;
   min-height: 395px;
-  z-index: 0;
+  z-index: -1;
   position: absolute;
   bottom: 79px;
   right: -18px;
-  overflow: hidden;
 }
 
 /*Медіазапити*/
 
-@media (min-width: 576px) { 
-.container {
-  max-width: 500px;
-}
-.vectorFooterManyLines{
-  min-width: 954px;
-  bottom: -50px;
-  right: -494px;
-}
- }
-
-@media (min-width: 768px) { 
-.container {
-  max-width: 700px;
-}
- .topManyLines{
-  min-width: 220px;
-  min-height: 150px;
-  left: -144px;
-  top: -33px;
-}
-
-.vectorFooterManyLines{
-  min-width: 954px;
-  min-height: 666px;
-  bottom: -50px;
-}
-}
-@media (min-width: 992px) { 
-.container {
-  max-width: 860px;
-}
-.vectorFooterManyLines{
-  min-width: 1148px;
-}
-.vectorBottomRight{
-  min-width: 636px;
-  min-height: 764px;
-  bottom: -81px;
-  right: -28px;
-
-}
-.topManyLines{
-  min-width: 300px;
-  min-height: 200px;
-  left: -144px;
-  top: -33px;
-}
- }
-
-@media (min-width: 1200px) { 
-.container {
-  max-width: 1100px;
-}
-.vectorBottomRight{
-  min-width: 719px;
-  min-height: 864px;
-  bottom: -81px;
-  right: -28px;
-}
-.topManyLines{
-  min-width: 400px;
-  min-height: 209px;
-  left: -165px;
-  top: -33px;
-}
-.topCircle{
-display: block;
-  min-width: 180px;
-  min-height: 180px;
-  max-width: 215px;
-  max-height: 215px;
-  right: -26px;
-  top: -67px;
-}
-.h1linesLeft{
-  display: block;
-  left: 20px;
-}
-.h1linesRight{
-  display: block;
-  right: 50px;
-}
- }
-
-@media (min-width: 1400px) { 
+@media (min-width: 576px) {
   .container {
-  max-width: 1300px;
+    max-width: 500px;
+  }
+.threeGreenLines{
+  width: 111px;
+  height: 5px;
+  top: 736px;
+  right: 96px;
 }
-.h1linesLeft{
-  display: block;
-  left: 50px;
-}
-.h1linesRight{
-  display: block;
-  right: 50px;
-}
-.mainPlus1{
-  right: 111px;
-  top: 56px;
-}
-.mainPlus2{
-  display: block;
-  left: 618px;
-  top: 56px;
-}
-.mainPlus3{
-  display: block;
-  right: 826px;
-  top: 68px;
+  .vectorFooterManyLines {
+    min-width: 954px;
+    max-width: 1148px;
+    min-height: 666px;
+    max-height: 801px;
+    bottom: -50px;
+    right: -494px;
+  }
 }
 
-.vectorFooterManyLines{
-  min-width: 1148px;
-  bottom: 0px;
-  right: -296px;
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+  .topManyLines {
+    min-width: 220px;
+    min-height: 150px;
+    left: -144px;
+    top: -33px;
+  }
+.threeGreenLines{
+  width: 111px;
+  height: 5px;
+  top: 636px;
+  right: 96px;
 }
-.vectorBottomRight{
-  min-width: 850px;
-  min-height: 1064px;
-  bottom: -81px;
-  right: -28px;
 
+  .vectorFooterManyLines {
+    min-width: 954px;
+    min-height: 666px;
+    bottom: -50px;
+  }
 }
-.topManyLines{
-  min-width: 450px;
-  min-height: 259px;
-  left: -165px;
-  top: -33px;
+@media (min-width: 992px) {
+  .container {
+    max-width: 860px;
+  }
+  .vectorFooterManyLines {
+    min-width: 1148px;
+  }
+  .vectorBottomRight {
+    min-width: 600px;
+    min-height: 800px;
+    bottom: -81px;
+    right: -28px;
+  }
+  .topManyLines {
+    left: -144px;
+    top: -33px;
+  }
+.threeGreenLines{
+  width: 111px;
+  height: 5px;
+  top: 950px;
+  right: 96px;
 }
-.topCircle{
-  display: block;
-  min-width: 215px;
-  min-height: 215px;
-  max-width: 215px;
-  max-height: 215px;
-  right: -26px;
-  top: -67px;
-}
- }
-@media (min-width: 1920px) { 
-  .h1linesLeft{
-  display: block;
-  top: 144px;
-  left: 272px;
-}
-.h1linesRight{
-  display: block;
-  top: 153px;
-  right: 287px;
-}
-.topManyLines{
-  min-width: 562px;
-  min-height: 309px;
-  left: -165px;
-  top: -33px;
-}
- }
 
+  .forPluses {
+    position: absolute;
+    top: 56px;
+    left: 50px;
+    right: 52px;
+    bottom: 341px;
+    z-index: -1;
+  }
+  .mainPlus1 {
+    top: 332px;
+    right: auto;
+    left: 355px;
+  }
+  .mainPlus2 {
+    top: 317px;
+    right: 262px;
+  }
+  .mainPlus3 {
+    top: 377px;
+    left: auto;
+    right: 870px;
+  }
+  .mainPlus4 {
+    top: 68px;
+    left: auto;
+    right: 829px;
+  }
+  .mainPlus5 {
+    top: 560px;
+    right: auto;
+    left: 121px;
+  }
+  .mainPlus6 {
+    top: 618px;
+    left: 892px;
+  }
+  .mainPlus7 {
+    top: 754px;
+    right: 227px;
+  }
+  .mainPlus8 {
+    top: 421px;
+    right: 29px;
+  }
+  .mainPlus9 {
+    top: 0;
+    left: auto;
+    right: 59px;
+  }
+  .mainPlus10 {
+    top: 0;
+    left: 568px;
+  }
+  .mainPlus11 {
+    top: 294px;
+    right: 8px;
+  }
+  .mainPlus12 {
+    top: 954px;
+    left: 404px;
+  }
+  .mainPlus13 {
+    top: 1204px;
+    right: auto;
+    left: 0;
+  }
+
+  .mainPlus14,
+  .mainPlus15,
+  .mainPlus16,
+  .mainPlus17,
+  .mainPlus18,
+  .mainPlus19,
+  .mainPlus20,
+  .mainPlus21,
+  .mainPlus22,
+  .mainPlus23,
+  .mainPlus24,
+  .mainPlus25,
+  .mainPlus26,
+  .mainPlus27,
+  .mainPlus28,
+  .mainPlus29,
+  .mainPlus30,
+  .mainPlus31 {
+    display: block;
+  }
+
+  .mainPlus14 {
+    top: 950px;
+    right: 556px;
+  }
+  .mainPlus15 {
+    top: 724px;
+    right: 59px;
+  }
+  .mainPlus16 {
+    top: 1314px;
+    right: 51px;
+  }
+  .mainPlus17 {
+    top: 1540px;
+    left: 888px;
+  }
+  .mainPlus18 {
+    top: 1565px;
+    left: 214px;
+  }
+  .mainPlus19 {
+    top: 873px;
+    left: 154px;
+  }
+  .mainPlus20 {
+    top: 615px;
+    left: 560px;
+  }
+  .mainPlus21 {
+    top: 1776px;
+    right: 825px;
+  }
+  .mainPlus22 {
+    top: 2032px;
+    right: 67px;
+  }
+  .mainPlus23 {
+    top: 2153px;
+    left: 814px;
+  }
+  .mainPlus24 {
+    top: 2015px;
+    left: 26px;
+  }
+  .mainPlus25 {
+    top: 2622px;
+    left: 59px;
+  }
+  .mainPlus26 {
+    top: 2878px;
+    left: 730px;
+  }
+  .mainPlus27 {
+    top: 2340px;
+    right: 714px;
+  }
+  .mainPlus28 {
+    top: 2205px;
+    left: 353px;
+  }
+  .mainPlus29 {
+    top: 1602px;
+    right: 320px;
+  }
+  .mainPlus30 {
+    top: 1690px;
+    right: 0;
+  }
+  .mainPlus31 {
+    top: 2332px;
+    left: 698px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1100px;
+  }
+  .vectorBottomRight {
+    min-width: 719px;
+    min-height: 864px;
+    bottom: -81px;
+    right: -28px;
+  }
+  .topManyLines {
+    min-width: 400px;
+    min-height: 209px;
+    left: -165px;
+    top: -33px;
+  }
+  .topCircle {
+    display: block;
+    min-width: 180px;
+    min-height: 180px;
+    max-width: 215px;
+    max-height: 215px;
+    right: -26px;
+    top: -67px;
+  }
+  .h1linesLeft {
+    display: block;
+    left: 20px;
+  }
+  .h1linesRight {
+    display: block;
+    right: 50px;
+  }
+  .threeGreenLines{
+  width: 145px;
+  height: 7px;
+  top: 1036px;
+  right: 96px;
+}
+.threeGreenLines::before{
+  width: 145px;
+  height: 10px;
+  bottom: 14px;
+  right: 56px;
+}
+.threeGreenLines::after{
+  width: 145px;
+  height: 10px;
+  top: 14px;
+  right: 23px;
+}
+.midGreenCircle{
+  width: 41px;
+  height: 41px;
+  border: 10px solid rgba(76, 240, 73, 1);
+  top: 969px;
+  left: 144px;
+  z-index: -1;
+}
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1300px;
+  }
+  .h1linesLeft {
+    display: block;
+    left: 50px;
+  }
+  .h1linesRight {
+    display: block;
+    right: 50px;
+  }
+
+  .topManyLines {
+    min-width: 450px;
+    min-height: 259px;
+    left: -165px;
+    top: -33px;
+  }
+  .topCircle {
+    display: block;
+    min-width: 215px;
+    min-height: 215px;
+    max-width: 215px;
+    max-height: 215px;
+    right: -26px;
+    top: -67px;
+  }
+  .midGreenCircle{
+
+  border: 10px solid rgba(76, 240, 73, 1);
+  top: 2169px;
+  left: 14px;
+}
+.midGreenCircleRightInMaxScreen{
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 5px solid rgba(76, 240, 73, 1);
+  top: 1660px;
+  right: 607px;
+  border-radius: 50%;
+}
+}
+@media (min-width: 1600px) {
+  .vectorBottomRight {
+    min-width: 850px;
+    min-height: 1064px;
+    max-width: 850px;
+    max-height: 1064px;
+    bottom: -81px;
+    right: -28px;
+  }
+  .vectorFooterManyLines {
+    min-width: 1148px;
+    max-width: 1148px;
+    min-height: 801px;
+    max-height: 801px;
+    bottom: -159px;
+    right: -268px;
+  }
+    .midGreenCircle{
+
+  border: 10px solid rgba(76, 240, 73, 1);
+  top: 2169px;
+  left: 30px;
+}
+}
+@media (min-width: 1920px) {
+  .h1linesLeft {
+    display: block;
+    top: 144px;
+    left: 272px;
+  }
+  .h1linesRight {
+    display: block;
+    top: 153px;
+    right: 287px;
+  }
+  .topManyLines {
+    min-width: 562px;
+    min-height: 309px;
+    left: -165px;
+    top: -33px;
+  }
+  .vectorBottomRight {
+    min-width: 850px;
+    min-height: 1064px;
+    max-width: 850px;
+    max-height: 1064px;
+    bottom: -81px;
+    right: -28px;
+  }
+  .vectorFooterManyLines {
+    min-width: 1148px;
+    max-width: 1148px;
+    min-height: 801px;
+    max-height: 801px;
+    bottom: -59px;
+    right: -268px;
+  }
+    .midGreenCircle{
+  width: 41px;
+  height: 41px;
+  border: 10px solid rgba(76, 240, 73, 1);
+  top: 2269px;
+  left: 144px;
+}
+}
+@media (min-width: 1921px) {
+  .vectorBottomRight {
+    min-width: 850px;
+    min-height: 1064px;
+    max-width: 850px;
+    max-height: 1064px;
+    bottom: -81px;
+    right: -28px;
+  }
+  .vectorFooterManyLines {
+    min-width: 1348px;
+    max-width: 1348px;
+    min-height: 1001px;
+    max-height: 1001px;
+    bottom: -359px;
+    right: -268px;
+  }
+  .midGreenCircleRightInMaxScreen{
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 5px solid rgba(76, 240, 73, 1);
+  top: 1600px;
+  right: 607px;
+  border-radius: 50%;
+}
+}
 </style>

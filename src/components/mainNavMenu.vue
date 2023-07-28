@@ -7,14 +7,11 @@
         </ul>
   </nav>
 </template>
+
 <script setup>
 import NavMenuItem from "../components/UI/links/mainNavMenuItem.vue";
-
-
-
-
-
 </script>
+
 <style scoped>
 .mainNav{
   display: none;
@@ -28,11 +25,11 @@ import NavMenuItem from "../components/UI/links/mainNavMenuItem.vue";
 }
 }
 .navlist {
-display: flex;
-list-style: none;
-justify-content: space-between;
-align-items: center;
-align-content: center;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 .navitem {
   z-index: 1;

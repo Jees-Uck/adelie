@@ -1,7 +1,7 @@
 <template>
   <div class="burger-menu">
     <button class="burger-icon" :class="{ 'active': isOpen }" @click="toggleMenu">
-        <img src="src/assets/vectors/burger.svg" alt="Menu">
+        <img src="./../../assets/vectors/burger.svg" alt="Menu">
     </button>
     <ul class="menu-items" v-if="isOpen">
       <li><a href="#">Home</a></li>

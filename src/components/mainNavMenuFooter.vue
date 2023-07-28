@@ -7,41 +7,39 @@
         </ul>
   </nav>
 </template>
+
 <script setup>
 import NavMenuItem from "./UI/links/mainNavMenuItem.vue";
-
-
-
-
-
 </script>
+
 <style scoped>
 .mainNavFooter{
-
   width: 355px;
   height: 23px;  
 }
+
 @media (min-width: 768px) {
 .mainNavFooter{
   width: 332px;
   height: 23px;  
 }
 }
+
 .navlistFooter {
-display: flex;
-list-style: none;
-justify-content: space-between;
-align-items: center;
-align-content: center;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 .navitemFooter {
   z-index: 1;
 }
 
 @media (min-width: 768px) {
-  .mainNavFooter {
-    display: block;
-  }
+.mainNavFooter {
+  display: block;
+}
 }
 
 </style>

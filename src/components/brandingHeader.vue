@@ -5,7 +5,7 @@
 <template>
 <div>
 <a href="">
-    <img class="logo" src="src/assets/icons/logo.svg" alt="logo">
+    <img class="logo" src="./../assets/icons/logo.svg" alt="logo">
 </a>
 
 </div>

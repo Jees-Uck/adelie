@@ -21,7 +21,8 @@ onUnmounted(() => {
 
 <template>
 <div class="container">
-    <div class="bannerMainLine"></div>
+
+
     <div class="homeMainTitle">
         <h1 class="flexForh1">
             <span dividerH1>              
@@ -40,7 +41,9 @@ onUnmounted(() => {
             Empower Your Online Business with Expert E-commerce Solutions
         </h3>
     </div>
+
     <div class="homeBanner">
+      <span class="bannerMainLine"></span>
         <div class="homeBannerTextBox">
             <h2>
                 Unlock the Power of 
@@ -52,13 +55,15 @@ onUnmounted(() => {
             </p>
         </div>
         <div class="homeBannerImageBox">
-                <img class="bannerBackground" src="src/assets/vectors/bannerBackground.svg" alt="">
-                <img class="bannerPeoples" src="src/assets/vectors/homeFirstBanner.svg" alt="">
+                <img class="bannerBackground" src="./../assets/vectors/bannerBackground.svg" alt="">
+                <img class="bannerPeoples" src="./../assets/vectors/homeFirstBanner.svg" alt="">
         </div>
+        <span class="homeMidLine"></span>
     </div>
     <HomeAccordion v-if="screenWidth <= 1200"/>
     <circularSlider v-else />
-    <div class="homeBanner">
+    <div class="homeBanner homeBannerPadding">
+    <span class="bannerMainLine2"></span>      
         <div class="homeBannerTextBox">
             <h2>
                 <span class="dashedWord">Who</span> <span class="dashedWord">will</span> will do it for you?
@@ -68,8 +73,8 @@ onUnmounted(() => {
             </p>
         </div>
         <div class="homeBannerImageBox">
-                <img class="bannerBackground" src="src/assets/vectors/bannerBackground.svg" alt="">
-                <img class=" bannerManWithImages" src="src/assets/vectors/homeSecondBanner.svg" alt="">
+                <img class="bannerBackground" src="./../assets/vectors/bannerBackground.svg" alt="">
+                <img class=" bannerManWithImages" src="./../assets/vectors/homeSecondBanner.svg" alt="">
         </div>
     </div>
     <ContactForm/>
@@ -78,16 +83,28 @@ onUnmounted(() => {
 
 <style scoped>
 .bannerMainLine{
-    background-image: url('src/assets/vectors/globalVectors/mainBannerLine.svg');
+    background-image: url('./../assets/vectors/globalVectors/mainBannerLine.svg');
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 267px;
-    height: 164px;
-    top: 278px;
+    width: 261px;
+    height: 82px;
+    top: 0px;
     right: 50%;
     transform: translateX(50%);
 }
+    .bannerMainLine2{
+    background-image: url('./../assets/vectors/globalVectors/mainBannerLine2.svg');
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 328px;
+    height: 148px;
+    bottom: 730px;
+    transform: rotate(-169.496deg);
+    right: 50%;
+    transform: translateX(50%);  
+    }
  .homeMainTitle{
     padding-top: 35px;
     display: flex;
@@ -140,7 +157,11 @@ h3{
     gap: 33px;
     min-width: 100%;
     justify-content: space-between;
+    position: relative;
 }
+ .homeBannerPadding{
+padding-top: 194px;
+ }
 .homeBannerTextBox{
     min-height: 169px;
     max-width: 709px;
@@ -177,7 +198,7 @@ h3{
 
 
 
-/*ПЕРЕРОБИТИ БАННЕРИ!*/
+
 .homeBannerImageBox{
     padding-top: 33px;
     min-width: 355px;
@@ -212,7 +233,7 @@ h3{
     max-width: 100%;
 
 }
-/*ПЕРЕРОБИТИ БАННЕРИ!*/
+
 
 
 /*Медіазапити*/
@@ -230,12 +251,29 @@ h2{
 h3{
     font-size: 22px;
 }
+    .bannerMainLine2{
+
+    width: 328px;
+    height: 269px;
+    bottom: 600px;
+    }
 }
 
 @media (min-width: 768px) { 
 h1{
     font-size: 46px;
 }
+.bannerMainLine{
+    width: 368px;
+    height: 110px;
+    top:-20px;
+}
+    .bannerMainLine2{
+
+    width: 328px;
+    height: 218px;
+    bottom: 600px;
+    }
 }
 
 @media (min-width: 992px) { 
@@ -261,6 +299,17 @@ h2{
     justify-content: space-between;
     gap: 20px;
 }
+.bannerMainLine{
+    width: 568px;
+    height: 180px;
+    top: -30px;
+}
+    .bannerMainLine2{
+
+    width: 428px;
+    height: 318px;
+    bottom: 400px;
+    }
 .firstBannerText{
     font-size: 20px;
     line-height: 35px;
@@ -299,6 +348,25 @@ h3{
 .BannerText{
     line-height: 35px;
 }
+.BannerText{
+
+    font-size: 20px;
+    line-height: 35px;
+}
+.bannerMainLine{
+    width: 668px;
+    height: 190px;
+    top: -50px;
+}
+    .bannerMainLine2{
+
+    width: 606px;
+    height: 274px;
+    bottom: 300px;
+    left: -150px;
+    right: auto;
+    transform: translateX(0);  
+    }
 }
 
 @media (min-width: 1400px) { 
@@ -316,5 +384,35 @@ h3{
     font-size: 25px;
     line-height: 35px;
 }
+
+ .homeBannerPadding{
+padding-top: 140px;
+ }
+.bannerMainLine{
+    width: 668px;
+    height: 210px;
+    top: -30px;
+}
+    .bannerMainLine2{
+
+    width: 606px;
+    height: 274px;
+    bottom: 300px;
+    left: -300px;
+    right: auto;
+    transform: translateX(0);  
+    }
+    .homeMidLine{
+          background-image: url('./../assets/vectors/globalVectors/homeMidLine.svg');
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 502px;
+    height: 495px;
+    top: 591px;
+
+    right: 223px;
+  
+    }
 }
  </style>

@@ -22,13 +22,13 @@ import FooterNavMenu from '../components/footerNavMenu.vue'
 
 <style >
 footer {
-  background-image: url('src/assets/vectors/globalVectors/footerMainVector.svg');
+  background-image: url('./src/assets/vectors/globalVectors/footerMainVector.svg');
   background-repeat: no-repeat;
   padding-top: 184px;
   min-width: 100%;
   height: 364px;
   background-position: -468px 10px;
-
+  background-color: transparent;
 }
 
 .footerMenuBox{
