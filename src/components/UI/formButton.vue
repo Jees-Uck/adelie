@@ -31,7 +31,7 @@
     100% { background-color: rgba(76, 240, 73, 0.1); box-shadow: 0 0 3px rgba(76, 240, 73, 0.1); }
 }
 .sendButton::after {
-    content: url('src/assets/vectors/formButtonArrow.svg');
+    content: url('../../../src/assets/vectors/formButtonArrow.svg');
     position: absolute;
     top: 20%;
     right: -20%;
@@ -43,8 +43,6 @@
     outline: none;
 }
 @media (min-width: 992px) { 
-.sendButton {
 
-}
 }
 </style>

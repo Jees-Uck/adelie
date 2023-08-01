@@ -1,38 +1,47 @@
 <script setup>
-import BrandingHeader from '../components/brandingHeader.vue'
-import mainNavMenu from '../components/mainNavMenu.vue'
-import headerSearchButton from '../components/UI/headerSearchButton.vue'
-import BurgerMenu from '../components/UI/burgerMenu.vue'
+import { ref, onMounted } from 'vue';
+import BrandingHeader from '../components/brandingHeader.vue';
+import headerMenu from '../components/headerMenu.vue';
+import headerSearchButton from '../components/UI/headerSearchButton.vue';
+import toggleButton from '../components/UI/toggleButton.vue';
+import axios from 'axios';
+
+const navLinks = ref([]);
+
+const fetchLayouts = async () => {
+  try {
+    const response = await axios.get('/src/layouts.json');
+    navLinks.value = response.data.data.nav_menu;
+  } catch (e) {
+    console.error(e);
+  }
+};
+onMounted(fetchLayouts);
 </script>
 
 <template>
   <header class="header">
     <div class="container">
       <div class="top">
-        <BrandingHeader/>
+        <BrandingHeader />
         <div class="navWrap">
-          <mainNavMenu/>
-          <headerSearchButton/> 
-          <BurgerMenu/>
+          <headerMenu :navLinks="navLinks" />
+          <headerSearchButton/>
+          <toggleButton></toggleButton>
         </div>
-         
       </div>
-      
     </div>
   </header>
 </template>
 
 <style scoped>
 .header {
-    padding-top: 20px;
+  padding-top: 20px;
   width: 100%;
   z-index: 1;
 }
-
 .top {
   position: relative;
-  min-height: 32px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,16 +54,19 @@ import BurgerMenu from '../components/UI/burgerMenu.vue'
 }
 
 @media (min-width: 768px) { 
-.navWrap {
-  gap: 102px;
-}
- }
  .top {
   height: 41px;
 }
-@media (min-width: 768px) { 
+
+}
+@media (min-width: 1024px) { 
 .top {
   justify-content: space-around;
+}
+.navWrap {
+  display: flex;
+  gap: 102px;
+  align-items: center;
 }
 }
 @media (min-width: 1920px) { 

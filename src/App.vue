@@ -69,6 +69,7 @@ import Footer from "./layouts/footer.vue";
   color: #000;
   line-height: 1.8em;
 }
+
 * {
   padding: 0;
   margin: 0;
@@ -85,25 +86,25 @@ footer {
 /*Шрифти*/
 @font-face {
   font-family: "gilroylight"; /*300*/
-  src: url("src/fonts/gilroy-light-webfont.woff2") format("woff2"),
-    url("src/fonts/gilroy-light-webfont.woff") format("woff"),
-    url("src/fonts/gilroy-light-webfont.ttf") format("truetype");
+  src: url("./fonts/gilroy-light-webfont.woff2") format("woff2"),
+    url("./fonts/gilroy-light-webfont.woff") format("woff"),
+    url("./fonts/gilroy-light-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "gilroymedium"; /*500*/
-  src: url("src/fonts/gilroy-medium-webfont.woff2") format("woff2"),
-    url("src/fonts/gilroy-medium-webfont.woff") format("woff"),
-    url("src/fonts/gilroy-medium-webfont.ttf") format("truetype");
+  src: url("./fonts/gilroy-medium-webfont.woff2") format("woff2"),
+    url("./fonts/gilroy-medium-webfont.woff") format("woff"),
+    url("./fonts/gilroy-medium-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "gilroyregular"; /*400*/
-  src: url("src/fonts/gilroy-regular-webfont.woff2") format("woff2"),
-    url("src/fonts/gilroy-regular-webfont.woff") format("woff"),
-    url("src/fonts/gilroy-regular-webfont.ttf") format("truetype");
+  src: url("./fonts/gilroy-regular-webfont.woff2") format("woff2"),
+    url("./fonts/gilroy-regular-webfont.woff") format("woff"),
+    url("./fonts/gilroy-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -166,7 +167,7 @@ label {
 }
 .h1linesRight {
   display: none;
-  background-image: url("./src/assets/vectors/globalVectors/h1linesRight.svg");
+  background-image: url("./assets/vectors/globalVectors/h1linesRight.svg");
   position: absolute;
   width: 177px;
   height: 164px;
@@ -223,7 +224,7 @@ label {
   z-index: -1;
 }
 .mainPlus {
-  background-image: url("./src/assets/vectors/globalVectors/mainPlus.svg");
+  background-image: url("./assets/vectors/globalVectors/mainPlus.svg");
   position: absolute;
   height: 8px;
   width: 8px;
@@ -308,7 +309,7 @@ label {
 }
 
 .topManyLines {
-  background-image: url("./src/assets/vectors/globalVectors/topManyLines.svg");
+  background-image: url("./assets/vectors/globalVectors/topManyLines.svg");
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -322,7 +323,7 @@ label {
 }
 .topCircle {
   display: none;
-  background-image: url("./src/assets/vectors/globalVectors/topCircle.svg");
+  background-image: url("./assets/vectors/globalVectors/topCircle.svg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -336,7 +337,7 @@ label {
 }
 
 .vectorFooterManyLines {
-  background-image: url("./src/assets/vectors/globalVectors/VectorBottomRightManyLines.svg");
+  background-image: url("./assets/vectors/globalVectors/VectorBottomRightManyLines.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -354,14 +355,14 @@ label {
 .vectorFooterManyLines::before {
   content: "";
   position: absolute;
-  background-image: url("./src/assets/vectors/globalVectors/plus.svg");
+  background-image: url("./assets/vectors/globalVectors/plus.svg");
   width: 8px;
   height: 8px;
   top: 173px;
   left: 305px;
 }
 .vectorBottomRight {
-  background-image: url("./src/assets/vectors/globalVectors/VectorBottomRight.svg");
+  background-image: url("./assets/vectors/globalVectors/VectorBottomRight.svg");
   background-size: cover;
   background-position: center;
   min-width: 331px;

@@ -105,6 +105,7 @@ const labelStyle = computed(() => {
   border-bottom: 2px solid red;
 }
 
+
 @media (min-width: 992px) {
   .wrapInput {
   position: relative;

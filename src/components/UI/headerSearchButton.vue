@@ -5,7 +5,7 @@
 <template>
 
 <button>
-    <img class="headerSearch" src="src/assets/icons/headerSearch.svg" alt="Search">
+    <img class="headerSearch" src="../../assets/icons/headerSearch.svg" alt="Search">
 </button>
 
 

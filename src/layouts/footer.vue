@@ -1,6 +1,21 @@
 <script setup>
+import { ref, onMounted } from 'vue';
 import BrandingFooter from '../components/brandingFooter.vue'
-import FooterNavMenu from '../components/footerNavMenu.vue'
+import footerMenu from '../components/footerMenu.vue'
+import axios from 'axios';
+
+const navLinks = ref([]);
+
+const fetchLayouts = async () => {
+  try {
+    const response = await axios.get('/src/layouts.json');
+    
+    navLinks.value = response.data.data.nav_menu;
+  } catch (e) {
+    console.error(e);
+  }
+};
+onMounted(fetchLayouts);
 </script>
 
 <template>  
@@ -12,7 +27,7 @@ import FooterNavMenu from '../components/footerNavMenu.vue'
               <BrandingFooter/>
               <p class="reserved">© 2023 All rights reserved</p>
             </div>
-            <FooterNavMenu/>
+            <footerMenu :navLinks="navLinks" />
           </div>
         </div>
       </div>
@@ -22,7 +37,7 @@ import FooterNavMenu from '../components/footerNavMenu.vue'
 
 <style >
 footer {
-  background-image: url('./src/assets/vectors/globalVectors/footerMainVector.svg');
+  background-image: url('../assets/vectors/globalVectors/footerMainVector.svg');
   background-repeat: no-repeat;
   padding-top: 184px;
   min-width: 100%;
@@ -35,13 +50,14 @@ footer {
   display: flex;
   height: 100%;
   justify-content: center;
+  min-width: 100%;
 }
 .bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 27px;
-
+  min-width: 100%;
 }
 
 .footerLogoWrap {
@@ -51,6 +67,7 @@ footer {
   flex-direction: column;
   gap: 31px;
   text-align: center;
+
 }
 
 .reserved {
@@ -74,56 +91,58 @@ footer {
   
 }
 @media (min-width: 992px) { 
-  .footerMenuBox{
+.footerMenuBox{
   justify-content: flex-start;
 }
-  .bottom {
+.bottom {
   flex-direction: row;
-  gap: 159px;
+  gap: 60px;
 }
 .footerLogoWrap {
   flex-direction: row;
+  min-width: 382px;
 }
+
 }
 @media (min-width: 1200px) { 
-    footer {
- background-position: -158px 10px;
+footer {
+  background-position: -158px 10px;
 }
-    .bottom {
-  gap: 100px;
+.bottom {
+  gap: 80px;
 }
 }
 @media (min-width: 1400px) { 
   footer {
- background-position: -158px 10px;
+background-position: -158px 10px;
 }
-  .bottom {
-  gap: 159px;
+.bottom {
+  gap: 100px;
 }
 }
 @media (min-width: 1920px) { 
-  footer{
-    position: relative;
-  }
-  .footerLogoWrap{
-position: absolute;
-    bottom: 91px;
-    left: 322px;
+footer{
+  position: relative;
+}
+.bottom{
+  position: absolute;
+  bottom: 91px;
+  left: 322px;
+  min-width: 382px;
+  gap: 159px;
 }
 .mainNavFooter{
-    width: 332px;
-    position: absolute;
-    width: 332px;
-    display: flex;
-    width: 332px;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 30px;
-    left: 863px;
-    bottom: 90px;
+  min-width: 883px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 30px;
+  left: 863px;
+  bottom: 90px;
 }
 .navlistFooter {
-    width: 100%;
+  width: 100%;
 }
 }
 </style>

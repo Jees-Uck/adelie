@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import NavMenuItem from "./UI/links/mainNavMenuItem.vue";
+import NavMenuItem from "./UI/links/headerMenuItem.vue";
 </script>
 
 <style scoped>
