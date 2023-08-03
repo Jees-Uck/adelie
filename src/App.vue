@@ -6,6 +6,7 @@ import Footer from "./layouts/footer.vue";
 <template>
   <div class="wrap">
     <div class="forPage">
+    
       <span class="topManyLines"></span>
       <span class="topCircle"></span>
 
@@ -52,11 +53,11 @@ import Footer from "./layouts/footer.vue";
       <!--Plus-->
 
       <Header />
-    </div>
-    <router-view></router-view>
+
+    <router-view class="router"></router-view>
     <div class="vectorBottomRight"></div>
     <div class="vectorFooterManyLines"></div>
-
+    </div>
     <Footer />
   </div>
 </template>
@@ -82,6 +83,11 @@ body {
 }
 footer {
   flex-shrink: 0;
+  
+}
+.router{
+  position:relative;
+  z-index: 555;
 }
 /*Шрифти*/
 @font-face {
