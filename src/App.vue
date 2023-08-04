@@ -1,10 +1,27 @@
 <script setup>
 import Header from "./layouts/header.vue";
 import Footer from "./layouts/footer.vue";
+import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+import Preloader from './components/UI/preloader.vue'
+
+
+const isLoading = ref(false);
+const router = useRouter();
+
+router.beforeEach(() => {
+  isLoading.value = true; 
+});
+
+router.afterEach(() => {
+  isLoading.value = false;
+});
+
 </script>
 
 <template>
   <div class="wrap">
+
     <div class="forPage">
     
       <span class="topManyLines"></span>
@@ -17,38 +34,7 @@ import Footer from "./layouts/footer.vue";
       <span class="midGreenCircleRightInMaxScreen"></span>
       <!--Plus-->
       <div class="forPluses">
-        <span class="mainPlus mainPlus1"></span>
-        <span class="mainPlus mainPlus2"></span>
-        <span class="mainPlus mainPlus3"></span>
-        <span class="mainPlus mainPlus4"></span>
-        <span class="mainPlus mainPlus5"></span>
-        <span class="mainPlus mainPlus6"></span>
-        <span class="mainPlus mainPlus7"></span>
-        <span class="mainPlus mainPlus8"></span>
-        <span class="mainPlus mainPlus9"></span>
-        <span class="mainPlus mainPlus10"></span>
-        <span class="mainPlus mainPlus11"></span>
-        <span class="mainPlus mainPlus12"></span>
-        <span class="mainPlus mainPlus13"></span>
-
-        <span class="mainPlus mainPlus14"></span>
-        <span class="mainPlus mainPlus15"></span>
-        <span class="mainPlus mainPlus16"></span>
-        <span class="mainPlus mainPlus17"></span>
-        <span class="mainPlus mainPlus18"></span>
-        <span class="mainPlus mainPlus19"></span>
-        <span class="mainPlus mainPlus20"></span>
-        <span class="mainPlus mainPlus21"></span>
-        <span class="mainPlus mainPlus22"></span>
-        <span class="mainPlus mainPlus23"></span>
-        <span class="mainPlus mainPlus24"></span>
-        <span class="mainPlus mainPlus25"></span>
-        <span class="mainPlus mainPlus26"></span>
-        <span class="mainPlus mainPlus27"></span>
-        <span class="mainPlus mainPlus28"></span>
-        <span class="mainPlus mainPlus29"></span>
-        <span class="mainPlus mainPlus30"></span>
-        <span class="mainPlus mainPlus21"></span>
+        <span v-for="i in 30" :key="i" :class="`mainPlus mainPlus${i}`"></span>
       </div>
       <!--Plus-->
 
@@ -87,7 +73,7 @@ footer {
 }
 .router{
   position:relative;
-  z-index: 555;
+  z-index: 2;
 }
 /*Шрифти*/
 @font-face {

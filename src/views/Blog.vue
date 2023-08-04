@@ -2,10 +2,10 @@
   <div class="container">
     <div class="blogBanner">
       <div class="blogTittleBox">
-        <h2 class="blogTitle">Блог</h2>
+        <h2 class="blogTitle">Blog</h2>
       </div>
       <div class="blogBreadCrumbsBox">
-        <div class="breadCrumbs">головна-блог</div>
+        <Breadcrumbs :breadcrumbs="breadcrumbs" />
       </div>
     </div>
     <div class="blogContent">
@@ -30,6 +30,14 @@ import { ref, onMounted, computed } from 'vue';
 import contentCard from "../components/contentCard.vue";
 import blogPagination from './../components/UI/blogPagination.vue';
 import axios from 'axios';
+import Breadcrumbs from './../components/UI/breadCrumbs.vue';
+
+
+const breadcrumbs = [
+  { label: 'Home', to: '/' },
+  { label: 'Blog', to: '/blog' },
+];
+
 
 const blogItem = ref([]);
 const currentPage = ref(1);
@@ -39,12 +47,15 @@ const fetchBlogs = async () => {
   try {
     const response = await axios.get('/src/blogs.json');
     blogItem.value = response.data.data.blogs;
+    totalItems.value = blogItem.value.length; 
+    localStorage.setItem('totalItems', totalItems.value); 
     console.log(`Всього елементів: ${totalItems.value}`);
     console.log(`Всього сторінок: ${totalPages.value}`);
   } catch (e) {
     console.error(e);
   }
 };
+
 
 onMounted(fetchBlogs);
 
@@ -73,7 +84,7 @@ display: flex;
 position: relative;
 flex-direction: column;
 gap: 37px;
-padding: 35px 0 36px 0;
+padding: 35px 0 0 0;
 justify-content: center;
 align-items: center;
 }
@@ -86,14 +97,21 @@ font-family: gilroyregular;
 font-size: 40px;
 line-height: 46px;
 }
-.breadCrumbs{
-text-align: center;
-font-family: gilroylight;
-font-size: 20px;
 
+.blogBreadCrumbsBox{
+display: flex;
+justify-content: center;
 }
+
+
 .blogPagination{
   padding-top: 62px;
   padding-bottom: 142px;
+}
+@media (min-width: 1400px){
+.blogBanner{
+padding: 103px 0 36px 0;
+gap: 28px;
+}
 }
 </style>

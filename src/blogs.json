@@ -90,6 +90,636 @@
                 "titleAlt": "image",
                 "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
                 "link": "read more"
+            },
+            {
+                "id": 10,
+                "title": "Changing image resizing with the ImageMagick console utility",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/1.jpg",
+                "titleAlt": "image",
+                "content": "For some reason, as the site's image directory started to take a lot of time, and it's impossible to change the file size of the site's scripts, you can locally run this task for ImageMagick's help. To change the size of one image input.jpg to 100 px width, …",
+                "link": "read more"
+            },
+            {
+                "id": 11,
+                "title": "How to learn new beginners easily",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/2.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 12,
+                "title": "Creating Great Gutenberg WordPress Blocks",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/3.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 13,
+                "title": "Is it procrastination?",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/4.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 14,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 15,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 16,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 17,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 18,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 1,
+                "title": "Changing image resizing with the ImageMagick console utility",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/1.jpg",
+                "titleAlt": "image",
+                "content": "For some reason, as the site's image directory started to take a lot of time, and it's impossible to change the file size of the site's scripts, you can locally run this task for ImageMagick's help. To change the size of one image input.jpg to 100 px width, …",
+                "link": "read more"
+            },
+            {
+                "id": 2,
+                "title": "How to learn new beginners easily",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/2.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 3,
+                "title": "Creating Great Gutenberg WordPress Blocks",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/3.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 4,
+                "title": "Is it procrastination?",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/4.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 5,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 6,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 7,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 8,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 9,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 10,
+                "title": "Changing image resizing with the ImageMagick console utility",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/1.jpg",
+                "titleAlt": "image",
+                "content": "For some reason, as the site's image directory started to take a lot of time, and it's impossible to change the file size of the site's scripts, you can locally run this task for ImageMagick's help. To change the size of one image input.jpg to 100 px width, …",
+                "link": "read more"
+            },
+            {
+                "id": 11,
+                "title": "How to learn new beginners easily",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/2.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 12,
+                "title": "Creating Great Gutenberg WordPress Blocks",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/3.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 13,
+                "title": "Is it procrastination?",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/4.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 14,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 15,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 16,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 17,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 18,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 1,
+                "title": "Changing image resizing with the ImageMagick console utility",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/1.jpg",
+                "titleAlt": "image",
+                "content": "For some reason, as the site's image directory started to take a lot of time, and it's impossible to change the file size of the site's scripts, you can locally run this task for ImageMagick's help. To change the size of one image input.jpg to 100 px width, …",
+                "link": "read more"
+            },
+            {
+                "id": 2,
+                "title": "How to learn new beginners easily",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/2.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 3,
+                "title": "Creating Great Gutenberg WordPress Blocks",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/3.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 4,
+                "title": "Is it procrastination?",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/4.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 5,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 6,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 7,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 8,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 9,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 10,
+                "title": "Changing image resizing with the ImageMagick console utility",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/1.jpg",
+                "titleAlt": "image",
+                "content": "For some reason, as the site's image directory started to take a lot of time, and it's impossible to change the file size of the site's scripts, you can locally run this task for ImageMagick's help. To change the size of one image input.jpg to 100 px width, …",
+                "link": "read more"
+            },
+            {
+                "id": 11,
+                "title": "How to learn new beginners easily",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/2.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 12,
+                "title": "Creating Great Gutenberg WordPress Blocks",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/3.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 13,
+                "title": "Is it procrastination?",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/4.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 14,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 15,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 16,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 17,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 18,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 1,
+                "title": "Changing image resizing with the ImageMagick console utility",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/1.jpg",
+                "titleAlt": "image",
+                "content": "For some reason, as the site's image directory started to take a lot of time, and it's impossible to change the file size of the site's scripts, you can locally run this task for ImageMagick's help. To change the size of one image input.jpg to 100 px width, …",
+                "link": "read more"
+            },
+            {
+                "id": 2,
+                "title": "How to learn new beginners easily",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/2.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 3,
+                "title": "Creating Great Gutenberg WordPress Blocks",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/3.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 4,
+                "title": "Is it procrastination?",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/4.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 5,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 6,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 7,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 8,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 9,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 10,
+                "title": "Changing image resizing with the ImageMagick console utility",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/1.jpg",
+                "titleAlt": "image",
+                "content": "For some reason, as the site's image directory started to take a lot of time, and it's impossible to change the file size of the site's scripts, you can locally run this task for ImageMagick's help. To change the size of one image input.jpg to 100 px width, …",
+                "link": "read more"
+            },
+            {
+                "id": 11,
+                "title": "How to learn new beginners easily",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/2.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 12,
+                "title": "Creating Great Gutenberg WordPress Blocks",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/3.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 13,
+                "title": "Is it procrastination?",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/4.jpg",
+                "titleAlt": "image",
+                "content": "The world is changing rapidly, and now we can get new skills and change the profession so quickly, as if it were fun. To be competitive in today's world, as much as possible, to get better and learn new skills. Now close the initial mortgage, ...",
+                "link": "read more"
+            },
+            {
+                "id": 14,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 15,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 16,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 17,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
+            },
+            {
+                "id": 18,
+                "title": "Creation of an online store OpenCart 3x independently",
+                "date": "07.03.2020",
+                "author": "admin",
+                "image": "./src/assets/images/5.jpg",
+                "titleAlt": "image",
+                "content": "To work, you need to install npm and Node.js and WordPress on a local npx server, you will need npm 5.2+ You may need to check the version of npm and Node.js: npm -v node -v Global install create-guten-block npm install -g create-guten- block …",
+                "link": "read more"
             }
         ]
     }

@@ -49,15 +49,15 @@ const props = defineProps({
   align-content: center;
   flex-wrap: wrap;
   width: 100%;
+  height: 100%;
   bottom: 0;
   left: 0;
   right: 0;
   top: 100px;
   padding: 0 15px;
   background-color: #fff;
-  z-index: 100;
+  z-index: 200;
   opacity: 1;
-  transition: opacity 0.1s 0.2s;
 }
 
 .navbar.navbar_visible:before {
