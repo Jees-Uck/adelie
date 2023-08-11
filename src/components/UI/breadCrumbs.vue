@@ -16,15 +16,13 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
-
 const { breadcrumbs } = defineProps(['breadcrumbs']);
 </script>
-
 <style>
+
+
 .breadcrumbs {
   max-width: 100%;
-  max-height: 23px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -34,8 +32,9 @@ const { breadcrumbs } = defineProps(['breadcrumbs']);
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: left;
   list-style: none;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
@@ -51,9 +50,12 @@ const { breadcrumbs } = defineProps(['breadcrumbs']);
   font-family: gilroylight;
   font-size: 20px;
   text-decoration: none;
+  word-break: break-all; 
 }
 
 .active {
   color: #B4B4B4;
 }
+
+
 </style>

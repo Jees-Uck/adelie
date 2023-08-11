@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import Home from '../views/Home.vue';
-
+import Blog from '../views/Blog.vue';
+import SingleBlogPage from '../views/SingleBlogPage.vue';
 
 const routes = [
     {
@@ -12,8 +13,15 @@ const routes = [
     {
         path: '/Blog',
         name: 'Blog',
-        component: () => import('../views/Blog.vue'),
+        component: Blog,
     },
+    {
+        path: '/blog/:id',
+        name: 'SingleBlog',
+        component: SingleBlogPage,
+        props: true,
+    },
+
 ];
 
 const router = createRouter({

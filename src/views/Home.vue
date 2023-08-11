@@ -21,8 +21,7 @@ onUnmounted(() => {
 
 <template>
 <div class="container">
-
-
+<div class="homeBox">
     <div class="homeMainTitle">
         <h1 class="flexForh1">
             <span dividerH1>              
@@ -78,10 +77,14 @@ onUnmounted(() => {
         </div>
     </div>
     <ContactForm/>
+    </div>
 </div>
 </template>
 
 <style scoped>
+.homeBox{
+    padding-bottom: 49px;
+}
 .bannerMainLine{
     background-image: url('./../assets/vectors/globalVectors/mainBannerLine.svg');
     position: absolute;

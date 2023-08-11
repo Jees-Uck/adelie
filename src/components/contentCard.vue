@@ -1,32 +1,38 @@
 <template>
-<div class="cardBox">
-  <div class="card">
-    <div class="imgBox">
-      <img :src="contentItem.image" :alt="contentItem.titleAlt" class="cardImage" />
-      <div class="dateAuthorBox">
-        <p class="cardDate">{{ contentItem.date }}</p>
-        <p class="cardAuthor">{{ contentItem.author }}</p>
+  <div class="cardBox">
+    <div class="innerCardBox">
+    <div class="card"> 
+      <div class="imgBox">
+        <img :src="contentItem.image" :alt="contentItem.titleAlt" class="cardImage" />
+        <div class="dateAuthorBox">
+          <p class="cardDate">{{ contentItem.date }}</p>
+          <p class="cardAuthor">{{ contentItem.author }}</p>
+        </div>
       </div>
+      <h3 class="cardTitle">{{ contentItem.title }}</h3>
+     <div class="cardTextBox" v-if="contentItem.isMainTextBlog && !inSlider">
+          <p class="cardContent">{{ contentItem.isMainTextBlog }}</p> 
+        </div>
     </div>
-    <h3 class="cardTitle">{{ contentItem.title }}</h3>
-    <div class="cardTextBox">
-        <p class="cardContent">{{ contentItem.content }}</p>
-    </div>
-
-    <a :href="contentItem.link" class="readMore">{{ contentItem.link }}</a>
-  </div>
+    <ReadMoreButton  :to="`/blog/${contentItem.id}`" label="Read More" />
 </div>
-
-
+  </div>
 </template>
 
 <script setup>
+import ReadMoreButton from './UI/buttons/readMoreBlog.vue';
+
 const props = defineProps({
   contentItem: {
     type: Object,
     required: true
+  },
+  inSlider: {
+    type: Boolean,
+    default: false
   }
 });
+
 </script>
 
 <style scoped>
@@ -36,6 +42,11 @@ const props = defineProps({
     flex-direction: row;
     justify-content: center;
 }
+.innerCardBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .card {
     max-width: 793px;
     display: flex;
@@ -43,7 +54,6 @@ const props = defineProps({
     align-items: flex-start;
     position: relative;
     padding-top: 47px;
-
 }
 
 .cardImage {
@@ -126,51 +136,21 @@ const props = defineProps({
   left: -27px;
   top: 1px;
 }
-.cardTextBox{
+.cardTextBox {
   width: 100%;
-  max-height: 155px;
-  text-overflow: ellipsis;
   margin-bottom: 13px;
+  overflow: hidden;
+  position: relative;
 }
+
 .cardContent {
-  padding-top: 19px;
   color: #000;
   font-family: gilroylight;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: 25px;
-}
-
-.readMore {
-  display: inline-block;
-  position: relative;
-  padding-top: 4px;
-  color: #000;
-  font-family: gilroymedium;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 35px;
-  text-transform: uppercase;
-  text-decoration: none;
-  width: 111px;
-  height: 35px;
-}
-.readMore::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 15px; 
-  background-color: #4CF049; 
-  z-index: -1;
-  transform: translateY(0); 
-  transition: transform 0.3s ease; 
-}
-.readMore:hover::before {
-  transform: translateY(-50%); 
+  overflow: hidden;
 }
 
 /*Медіазапити*/
@@ -185,17 +165,26 @@ const props = defineProps({
 .imgBox {
   height: 370px;
 }
+.card {
+min-width: 100%;
+max-width: 793px;
+}
 }
 
 @media (min-width: 992px) { 
 .imgBox {
   height: 400px;
 }
+
 }
 
 @media (min-width: 1200px) { 
 .imgBox {
   height: 420px;
+}
+.card {
+min-width: auto;
+max-width: 793px;
 }
 .cardTitle {
   font-size: 30px;

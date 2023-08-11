@@ -2,8 +2,8 @@
 import { ref, onMounted } from 'vue';
 import BrandingHeader from '../components/brandingHeader.vue';
 import headerMenu from '../components/headerMenu.vue';
-import headerSearchButton from '../components/UI/headerSearchButton.vue';
-import toggleButton from '../components/UI/toggleButton.vue';
+import headerSearchButton from './../components/UI/buttons/headerSearchButton.vue';
+import toggleButton from '../components/UI/buttons/toggleButton.vue';
 import axios from 'axios';
 
 const navLinks = ref([]);

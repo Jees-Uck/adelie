@@ -23,8 +23,6 @@
   </div>
 </template>
 
-
-
 <script setup>
 import { ref, onMounted, computed } from 'vue';
 import contentCard from "../components/contentCard.vue";
@@ -32,17 +30,16 @@ import blogPagination from './../components/UI/blogPagination.vue';
 import axios from 'axios';
 import Breadcrumbs from './../components/UI/breadCrumbs.vue';
 
-
 const breadcrumbs = [
   { label: 'Home', to: '/' },
   { label: 'Blog', to: '/blog' },
 ];
 
-
 const blogItem = ref([]);
 const currentPage = ref(1);
 const pageSize = ref(5);
 const totalItems = ref(parseInt(localStorage.getItem('totalItems')) || 0);
+
 const fetchBlogs = async () => {
   try {
     const response = await axios.get('/src/blogs.json');
@@ -55,7 +52,6 @@ const fetchBlogs = async () => {
     console.error(e);
   }
 };
-
 
 onMounted(fetchBlogs);
 
@@ -76,7 +72,9 @@ const visibleBlogItems = computed(() => {
   const endIndex = Math.min(startIndex + pageSize.value, totalItems.value);
   return blogItem.value.slice(startIndex, endIndex);
 });
+
 </script>
+
 
 <style>
 .blogBanner{

@@ -22,7 +22,7 @@
               <div v-if="isNameInvalid" class="errorMessageInput">
                 {{ $t(nameErrorMessage) }}
               </div>
-  </div>
+            </div>
 
             <div class="formInput">
               <formInput
@@ -84,7 +84,7 @@ import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import formInput from "./UI/formInput.vue";
 import FormTextarea from "./UI/formTextarea.vue";
-import formButton from "./UI/formButton.vue";
+import formButton from "./UI/buttons/formButton.vue";
 
 const form = {
   name: { name: "name", type: "text", required: true },

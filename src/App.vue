@@ -65,7 +65,9 @@ router.afterEach(() => {
 body {
   background: #fff;
   margin: 0;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 footer {
   flex-shrink: 0;
@@ -103,9 +105,10 @@ footer {
 .wrap {
   position: relative;
   overflow: hidden;
+  flex: 1;
 }
 .forPage {
-  min-height: 100%;
+  min-height: 100vh;
 }
 h1 {
   font-family: gilroyregular;
@@ -173,7 +176,7 @@ label {
   top: 769px;
   right: 11px;
   background-color: rgba(76, 240, 73, 1);
-  z-index: 2;
+  z-index: 0;
 }
 
 .threeGreenLines::before{
@@ -202,7 +205,7 @@ label {
   border-radius: 50%;
   top: 1090px;
   left: 52px;
-  z-index: 0;
+  z-index: -1;
 }
 .midGreenCircleRightInMaxScreen{
   display: none;

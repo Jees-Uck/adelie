@@ -37,6 +37,7 @@ onMounted(fetchLayouts);
 
 <style >
 footer {
+
   background-image: url('../assets/vectors/globalVectors/footerMainVector.svg');
   background-repeat: no-repeat;
   padding-top: 184px;
