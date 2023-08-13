@@ -14,7 +14,7 @@
           <p class="cardContent">{{ contentItem.isMainTextBlog }}</p> 
         </div>
     </div>
-    <ReadMoreButton  :to="`/blog/${contentItem.id}`" label="Read More" />
+
 </div>
   </div>
 </template>

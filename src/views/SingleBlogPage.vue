@@ -36,14 +36,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue';
+import { ref, computed, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
 import Breadcrumbs from './../components/UI/breadCrumbs.vue';
-import SingleBlogText from '../components/SingleBlogText.vue'
-import BlogSlider from "../components/blogSlider.vue"
-
-
+import SingleBlogText from '../components/SingleBlogText.vue';
+import BlogSlider from '../components/blogSlider.vue';
 
 const blogId = ref(null);
 const singleBlog = ref({});
@@ -53,7 +51,7 @@ blogId.value = route.params.id;
 
 const fetchAllBlogs = async () => {
   try {
-    const response = await axios.get('/src/blogs.json'); 
+    const response = await axios.get('/src/blogs.json');
     blogs.value = response.data.data.blogs;
   } catch (e) {
     console.error(e);
@@ -62,18 +60,14 @@ const fetchAllBlogs = async () => {
 
 const fetchSingleBlog = async () => {
   try {
-    const response = await axios.get('/src/blogs.json'); 
-    const allBlogs = response.data.data.blogs; 
-    singleBlog.value = allBlogs.find((blog) => blog.id === Number(blogId.value)); 
-    console.log("Single Blog:", singleBlog.value); 
+    const response = await axios.get('/src/blogs.json');
+    const allBlogs = response.data.data.blogs;
+    singleBlog.value = allBlogs.find((blog) => blog.id === Number(blogId.value));
+    console.log('Single Blog:', singleBlog.value);
   } catch (e) {
     console.error(e);
   }
 };
-
-onMounted(async () => {
-  await Promise.all([fetchSingleBlog(), fetchAllBlogs()]);
-});
 
 const dynamicBreadcrumbs = computed(() => {
   const blogBreadcrumb = { label: singleBlog.value.title, to: `/blog/${blogId.value}` };
@@ -84,14 +78,34 @@ const dynamicBreadcrumbs = computed(() => {
   return [...defaultBreadcrumbs, blogBreadcrumb];
 });
 
-const currentBlogIndex = computed(() => blogs.value.findIndex(blog => blog.id === singleBlog.value.id));
+const currentBlogIndex = computed(() => blogs.value.findIndex((blog) => blog.id === singleBlog.value.id));
 const previousBlog = computed(() => blogs.value[currentBlogIndex.value - 1]);
 const nextBlog = computed(() => {
   const nextIndex = currentBlogIndex.value + 1;
   return nextIndex < blogs.value.length ? blogs.value[nextIndex] : null;
 });
 
+const changeBlogContent = () => {
+  singleBlog.value = findBlogById(blogId.value);
+};
 
+const findBlogById = (blogId) => {
+  return blogs.value.find((blog) => blog.id === blogId);
+};
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+watch(() => route.params.id, (newBlogId) => {
+  blogId.value = newBlogId;
+  fetchSingleBlog();
+  scrollToTop();
+});
+
+onMounted(async () => {
+  await Promise.all([fetchSingleBlog(), fetchAllBlogs()]);
+});
 </script>
 
 
@@ -113,39 +127,37 @@ const nextBlog = computed(() => {
 }
 
 .singleBlogCardBox{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .singleBlogCard {
-    max-width: 793px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    padding-top: 44px;
-
+  max-width: 793px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding-top: 44px;
 }
 
 .singleBlogCardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .singleBlogImgBox {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: auto;
-    width: 100%;
-    height: 230px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: auto;
+  width: 100%;
+  height: 230px;
 }
-
 
 .singleBlogDateAuthorBox {
   position: absolute;
@@ -234,51 +246,49 @@ const nextBlog = computed(() => {
 /*Медіазапити*/
 
 @media (min-width: 576px) { 
-.imgBox {
-  height: 330px;
-}
+  .imgBox {
+    height: 330px;
+  }
 }
 
 @media (min-width: 768px) { 
-.imgBox {
-  height: 370px;
-}
+  .imgBox {
+    height: 370px;
+  }
 }
 
 @media (min-width: 992px) { 
-.imgBox {
-  height: 400px;
-}
+  .imgBox {
+    height: 400px;
+  }
 }
 
 @media (min-width: 1200px) { 
-.singlePageImgBox {
-  height: 420px;
-}
-.singlePageCardTitle {
-  font-size: 30px;
-  padding-top: 8px;
-}
-.singlePageCardTextBox{
-  max-height: 105px;
-  margin-bottom: 16px;
-}
-
-.singlePageCardContent {
-  padding-top: 13px;
-  font-size: 20px;
-  line-height: 35px;
-}
+  .singlePageImgBox {
+    height: 420px;
+  }
+  .singlePageCardTitle {
+    font-size: 30px;
+    padding-top: 8px;
+  }
+  .singlePageCardTextBox{
+    max-height: 105px;
+    margin-bottom: 16px;
+  }
+  .singlePageCardContent {
+    padding-top: 13px;
+    font-size: 20px;
+    line-height: 35px;
+  }
 }
 @media (min-width: 1400px) { 
-.singlePageCard{
+  .singlePageCard{
     padding-top: 35px;
-}
-
+  }
 }
 @media (min-width: 1920px) { 
-.singlePageCard{
+  .singlePageCard{
     padding-top: 40px;
-}
+  }
 }
 </style>

@@ -10,7 +10,10 @@
     </div>
     <div class="blogContent">
       <div class="blogFeed">
-        <contentCard v-for="contentItem in visibleBlogItems" :key="contentItem.id" :contentItem="contentItem" />
+        <div class="blogCardWrapper" v-for="contentItem in visibleBlogItems" :key="contentItem.id">
+          <contentCard :contentItem="contentItem" />
+          <ReadMoreButton :to="`/blog/${contentItem.id}`" label="Read More" />
+        </div>
       </div>
     </div>
     <blogPagination
@@ -26,6 +29,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue';
 import contentCard from "../components/contentCard.vue";
+import ReadMoreButton from '/src/components/UI/buttons/readMoreBlog.vue';
 import blogPagination from './../components/UI/blogPagination.vue';
 import axios from 'axios';
 import Breadcrumbs from './../components/UI/breadCrumbs.vue';
