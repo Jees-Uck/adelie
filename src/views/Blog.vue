@@ -11,8 +11,10 @@
     <div class="blogContent">
       <div class="blogFeed">
         <div class="blogCardWrapper" v-for="contentItem in visibleBlogItems" :key="contentItem.id">
-          <contentCard :contentItem="contentItem" />
-          <ReadMoreButton :to="`/blog/${contentItem.id}`" label="Read More" />
+          <div class="blogCardWrapperInner">
+            <contentCard :contentItem="contentItem" />
+            <ReadMoreButton :to="`/blog/${contentItem.id}`" label="Read More" />
+          </div>  
         </div>
       </div>
     </div>
@@ -30,7 +32,7 @@
 import { ref, onMounted, computed } from 'vue';
 import contentCard from "../components/contentCard.vue";
 import ReadMoreButton from '/src/components/UI/buttons/readMoreBlog.vue';
-import blogPagination from './../components/UI/blogPagination.vue';
+import blogPagination from '../components/UI/blogPagination.vue';
 import axios from 'axios';
 import Breadcrumbs from './../components/UI/breadCrumbs.vue';
 
@@ -99,7 +101,14 @@ font-family: gilroyregular;
 font-size: 40px;
 line-height: 46px;
 }
-
+.blogCardWrapper{
+  display: flex;
+  justify-content: center;
+}
+.blogCardWrapperInner{
+display: flex;
+flex-direction: column;
+}
 .blogBreadCrumbsBox{
 display: flex;
 justify-content: center;
@@ -114,6 +123,9 @@ justify-content: center;
 .blogBanner{
 padding: 103px 0 36px 0;
 gap: 28px;
+}
+.blogTitle{
+  font-size: 70px;
 }
 }
 </style>

@@ -4,6 +4,7 @@ import Home from '../views/Home.vue';
 import Blog from '../views/Blog.vue';
 import SingleBlogPage from '../views/SingleBlogPage.vue';
 import blogSlider from '../components/blogSlider.vue'
+import Portfolio from '../views/Portfolio.vue'
 
 const routes = [
     {
@@ -22,7 +23,13 @@ const routes = [
         components: { default: SingleBlogPage, slider: blogSlider },
         props: true,
     },
-
+    {
+        path: '/Contact',
+        name: 'Portfolio',
+        component: Portfolio,
+        props: true,
+    },
+/* портфоліо тимчасово розміщенно в "Контакти" */
 ];
 
 const router = createRouter({

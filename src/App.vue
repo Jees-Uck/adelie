@@ -176,7 +176,7 @@ label {
   top: 769px;
   right: 11px;
   background-color: rgba(76, 240, 73, 1);
-  z-index: 0;
+  z-index: -1;
 }
 
 .threeGreenLines::before{

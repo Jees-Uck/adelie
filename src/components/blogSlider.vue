@@ -9,7 +9,8 @@
       </div>
     </div>
     <div class="blogSliderTitleBox">
-      <h3 class="blogSliderTitle">Recommended materials</h3>
+      <h3 class="blogSliderTitle">
+      <span class="blogFirstWord">Recommended </span> materials</h3>
     </div>
     <div class="blogCardContainer">
       <div class="blogCards">
@@ -76,6 +77,8 @@ const showNextBlogs = () => {
     activeIndex.value = (activeIndex.value + itemsPerPage) % props.blogs.length;
   }
 };
+
+
 </script>
 
 <style scoped>
@@ -165,13 +168,30 @@ const showNextBlogs = () => {
 .blogSliderTitle {
   font: 300 35px/50px gilroylight;
 }
-
+.blogFirstWord{
+  position: relative;
+}
+.blogFirstWord::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15px; 
+  background-color: #4CF049; 
+  z-index: -1;
+  transform: translateY(0); 
+}
 .blogCardContainer {
   width: 100%;
   margin-top: 20px;
   padding-bottom: 104px;
 }
-
+.blogCardWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .blogCards {
   display: flex;
   flex-direction: column;
@@ -204,6 +224,10 @@ const showNextBlogs = () => {
   .blogSliderButBox {
     max-width: 400px;
   }
+  .blogFirstWord::before{
+    width: 96%;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -216,12 +240,18 @@ const showNextBlogs = () => {
     flex-direction: row;
     justify-content: space-between;
   }
+  .blogFirstWord::before{
+    bottom: 1%;
+  }
 }
 
 @media (min-width: 1920px) {
   .blogSliderTitle {
     font-size: 50px;
     line-height: 70px;
+  }
+    .blogFirstWord::before{
+    bottom: 12%;
   }
 }
 </style>

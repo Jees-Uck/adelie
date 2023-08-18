@@ -10,17 +10,17 @@
         </div>
       </div>
       <h3 class="cardTitle">{{ contentItem.title }}</h3>
-     <div class="cardTextBox" v-if="contentItem.isMainTextBlog && !inSlider">
-          <p class="cardContent">{{ contentItem.isMainTextBlog }}</p> 
-        </div>
+      <div class="cardTextBox" v-if="contentItem.isMainTextBlog && !inSlider">
+        <text-clamp class="cardContent" :text="contentItem.isMainTextBlog" :max-lines="3"/> 
+      </div>
     </div>
-
 </div>
   </div>
 </template>
 
 <script setup>
 import ReadMoreButton from './UI/buttons/readMoreBlog.vue';
+import TextClamp from 'vue3-text-clamp';
 
 const props = defineProps({
   contentItem: {
@@ -139,8 +139,8 @@ const props = defineProps({
 .cardTextBox {
   width: 100%;
   margin-bottom: 13px;
-  overflow: hidden;
   position: relative;
+ 
 }
 
 .cardContent {
@@ -150,7 +150,7 @@ const props = defineProps({
   font-style: normal;
   font-weight: 300;
   line-height: 25px;
-  overflow: hidden;
+
 }
 
 /*Медіазапити*/
@@ -214,7 +214,7 @@ max-width: 793px;
 }
 @media (min-width: 1920px) { 
 .card{
-    padding-top: 40px;
+    padding-top: 47px;
 }
 }
 </style>

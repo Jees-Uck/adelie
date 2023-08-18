@@ -30,17 +30,13 @@ const { breadcrumbs } = defineProps(['breadcrumbs']);
 
 .breadcrumbsList {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: left;
   list-style: none;
-  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
 
 .breadcrumbsListItem {
-  display: flex;
+  display: unset;
   align-items: center;
 }
 
