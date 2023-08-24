@@ -119,11 +119,13 @@ onMounted(async () => {
   align-content: center;
   flex-wrap: wrap;
   gap: 37px;
+
 }
 .singleBlogPageTitle{
   text-align: center;
-  font-family: gilroyregular;
-  font-size: 40px;
+font: 40px gilroyregular;
+
+    max-width: 790px;
 }
 
 .singleBlogCardBox{
@@ -139,6 +141,7 @@ onMounted(async () => {
   align-items: flex-start;
   position: relative;
   padding-top: 44px;
+  min-width: 100%;
 }
 
 .singleBlogCardImage {
@@ -175,23 +178,17 @@ onMounted(async () => {
 
 .singleBlogCardTitle {
   color: #000;
-  font-family: gilroyregular;
-  font-size: 23px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 40px;
-  padding-top: 8px;
+font: 300 23px/40px gilroylight;
+padding-top: 8px;
+
 }
 
 .singleBlogCardDate,
 .singleBlogCardAuthor {
   position: relative;
   color: #000;
-  font-family: gilroylight;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 35px;
+  font: 300 17px/35px gilroylight;
+
 }
 
 .singleBlogCardDate::before {
@@ -223,11 +220,8 @@ onMounted(async () => {
 .singleBlogCardContent {
   padding-top: 19px;
   color: #000;
-  font-family: gilroylight;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 25px;
+  font: 300 16px/25px gilroylight;
+
 }
 .borderOfBoldText{
   border: 1px solid #000;
@@ -236,31 +230,35 @@ onMounted(async () => {
 }
 .singleBlogCardContentBold {
   padding-top: 19px;
-  font-family: gilroymedium;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 25px;
+font: 700 16px/25px gilroymedium;
+
 }
 
 /*Медіазапити*/
 
 @media (min-width: 576px) { 
-  .imgBox {
+  .singleBlogImgBox {
     height: 330px;
   }
 }
 
 @media (min-width: 768px) { 
-  .imgBox {
+  .singleBlogImgBox {
     height: 370px;
   }
 }
 
 @media (min-width: 992px) { 
-  .imgBox {
+  .singleBlogImgBox {
     height: 400px;
+    max-width: 790px;
   }
+  .singleBlogCard{
+    align-items: center;
+  }
+    .singleBlogPageTitle {
+    font-size: 40px;
+}
 }
 
 @media (min-width: 1200px) { 
@@ -280,6 +278,9 @@ onMounted(async () => {
     font-size: 20px;
     line-height: 35px;
   }
+  .singleBlogPageTitle {
+  font: 400 70px/normal gilroyregular;
+}
 }
 @media (min-width: 1400px) { 
   .singlePageCard{

@@ -1,4 +1,8 @@
 <template>
+
+<div class="blogBox">
+<span class="nextPageTopLine"></span>
+<span class="nextPageMidLine"></span>
   <div class="singleBlogTextRel">
     <div v-for="textBlog in blogTexts" :key="textBlog.title" class="blogTextsBox">
       <h3 class="SinglePageBlogTitle" v-if="textBlog.title">{{ textBlog.title }}</h3>
@@ -16,6 +20,7 @@
     </div>
     <div class="endLine"></div>
   </div>
+</div>
 </template>
 
 <script setup>
@@ -25,6 +30,34 @@ const props = defineProps({
 </script>
 
 <style scoped>
+.blogBox{
+  position: relative;
+
+}
+.nextPageTopLine{
+  position: absolute;
+  background-image: url('../assets/vectors/blogNextPageTopLine.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  top: 0;
+  left: 0;
+  width: 900px;
+  height: 1000px;
+}
+.nextPageMidLine{
+  position: absolute;
+  background-image: url('../assets/vectors/blogNextPageMidLine.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  top: 1720px;
+  right: -178px;
+  width: 500px;
+  height: 600px;
+}
+
+
 .singleBlogTextRel {
   position: relative;
   max-width: 790px;
@@ -87,5 +120,17 @@ const props = defineProps({
   left: -241px;
   height: 1px;
   margin-top: 44px;
+}
+
+@media (min-width: 1200px) {
+  .SinglePageBlogTitle,
+.SinglePageBlogText {
+  font-size: 20px;
+}
+.SinglePageBlogTitle {
+  font-size: 30px;
+  line-height: 40px;
+  padding: 30px 0 10px;
+}
 }
 </style>

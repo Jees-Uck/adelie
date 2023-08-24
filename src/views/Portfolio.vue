@@ -10,21 +10,25 @@
     </div>
     <div class="categoryFilter">
       <div class="categoryFilterButtons">
-      <button
-        class="categoryFilterBtn"
-        :class="{ 'activeCategory': isAllActive }"
-        @click="selectCategory(null)"
-        :autofocus="isAllActive"
-          >
-        All
-      </button>
-          <button class="categoryFilterBtn" v-for="(count, category) in itemCountByCategory" :key="category" @click="selectCategory(category)">
-            {{ category }} ({{ count }})
-          </button>
-        </div>
+        <button
+          class="categoryFilterBtn  activeButton"
+          :class="{ 'activeCategory': selectedCategory === 'all' }"
+          @click="selectCategory('all')"
+        >
+          All
+        </button>
+        <button
+          class="categoryFilterBtn"
+          v-for="(count, category) in itemCountByCategory"
+          :key="category"
+          :class="{ 'activeCategory ': selectedCategory === category }"
+          @click="selectCategory(category)"
+        >
+          {{ category }} ({{ count }})
+        </button>
       </div>
-    <div class="btnsLine">
     </div>
+    <div class="btnsLine"></div>
     <div class="portfolioContent">
       <portfolioCard
         v-for="(item, index) in visiblePortfolioData"
@@ -32,13 +36,13 @@
         :portfolioCard="item"
       />
     </div>
-<portfolioPagination
-  :currentPage="currentPage"
-  :pageSize="pageSize"
-  :totalItems="totalItems"
-  @pageChange="handlePageChange"
-/>
-
+    <portfolioPagination
+      :currentPage="currentPage"
+      :dynamicPageSize="dynamicPageSize"
+      :totalItems="totalItems"
+      :totalItemsInPagination="totalItemsInPagination"
+      @pageChange="handlePageChange"
+    />
   </div>
 </template>
 
@@ -48,55 +52,64 @@ import portfolioCard from "../components/portfolioCard.vue";
 import portfolioPagination from '../components/UI/portfolioPagination.vue';
 import axios from 'axios';
 import Breadcrumbs from './../components/UI/breadCrumbs.vue';
+import { useRoute } from 'vue-router';
 
 const breadcrumbs = [
   { label: 'Home', to: '/' },
   { label: 'Portfolio', to: '/contact' },
 ];
-const isAllActive = computed(() => selectedCategory.value === null);
 const portfolioData = ref([]);
 const currentPage = ref(1);
-const pageSize = ref(5);
 const totalItems = ref(parseInt(localStorage.getItem('totalItems')) || 0);
 const selectedCategory = ref(null);
+const route = useRoute();
+const queryParams = route.query;
 
+selectedCategory.value = queryParams.category || localStorage.getItem('selectedCategory') || null;
 
-
-onMounted(async () => {
+const initialize = async () => {
   try {
     const response = await axios.get('/src/portfolio.json');
     portfolioData.value = response.data.data.portfolioCard;
-    totalItems.value = portfolioData.value.length; 
+    const savedCategory = localStorage.getItem('selectedCategory');
+    selectedCategory.value = savedCategory || 'all';
+
+    updateFilters();
   } catch (error) {
-    console.error('Помилка отримання даних:', error);
+    console.error('Error fetching data:', error);
   }
-});
-
-
+};
 
 const screenWidth = ref(window.innerWidth);
 window.addEventListener('resize', () => {
   screenWidth.value = window.innerWidth;
 });
 
+const dynamicPageSize = computed(() => {
+  if (screenWidth.value >= 1400) {
+    return 9; 
+  } else if (screenWidth.value >= 992) {
+    return 6; 
+  } else {
+    return 6; 
+  }
+});
 
 const visiblePortfolioData = computed(() => {
-  const startIndex = (currentPage.value - 1) * pageSize.value;
+  const startIndex = (currentPage.value - 1) * dynamicPageSize.value;
 
   let endIndex;
   if (screenWidth.value >= 992 && screenWidth.value < 1400) {
-    endIndex = Math.min(startIndex + pageSize.value + 1, totalItems.value);
+    endIndex = Math.min(startIndex + dynamicPageSize.value , totalItems.value);
   } else if (screenWidth.value >= 1400) {
-    endIndex = Math.min(startIndex + pageSize.value + 4, totalItems.value);
+    endIndex = Math.min(startIndex + dynamicPageSize.value , totalItems.value);
   } else {
-    endIndex = Math.min(startIndex + pageSize.value, totalItems.value);
+    endIndex = Math.min(startIndex + dynamicPageSize.value, totalItems.value);
   }
 
-
   const filteredData = selectedCategory.value
-    ? portfolioData.value.filter(item => item.category === selectedCategory.value)
+    ? portfolioData.value.filter(item => item.category === selectedCategory.value || (item.general === 'all' && selectedCategory.value === 'all'))
     : portfolioData.value;
-
 
   endIndex = Math.min(endIndex, filteredData.length);
 
@@ -105,7 +118,9 @@ const visiblePortfolioData = computed(() => {
 
 const selectCategory = (category) => {
   selectedCategory.value = category;
-  currentPage.value = 1; 
+  currentPage.value = 1;
+  localStorage.setItem('selectedCategory', category);
+  updateFilters();
 };
 
 const itemCountByCategory = computed(() => {
@@ -124,10 +139,30 @@ const itemCountByCategory = computed(() => {
 
 const handlePageChange = (page) => {
   currentPage.value = page;
-  console.log(`Переключено на сторінку ${page}`);
+  console.log(`Switched to page ${page}`);
 };
 
+const updateFilters = () => {
+  const filteredData = selectedCategory.value
+    ? portfolioData.value.filter(item => item.category === selectedCategory.value || (item.general === 'all' && selectedCategory.value === 'all'))
+    : portfolioData.value;
+  totalItems.value = filteredData.length;
+  currentPage.value = 1;
+  localStorage.setItem('selectedCategory', selectedCategory.value);
+};
+
+const totalItemsInPagination = computed(() => totalItems.value);
+
+onMounted(() => {
+  initialize();
+});
 </script>
+
+
+
+
+
+
 
 
 
@@ -198,21 +233,14 @@ position: relative;
 min-height: 42px;
 }
 
-.categoryFilterBtn:active,
-.categoryFilterBtn:focus {
+.activeCategory {
 font-family: gilroymedium;
   color: #000000;
   outline: none; 
   font-weight: 500;
 }
-.categoryFilterBtn:active,
-.categoryFilterBtn:focus {
-font-family: gilroymedium;
-  color: #000000;
-  outline: none; 
-  font-weight: 500;
-}
-.categoryFilterBtn:focus::before {
+
+.activeCategory:focus::before {
   display: none;
 }
 .btnsLine{
@@ -221,10 +249,7 @@ font-family: gilroymedium;
 .portfolioContent{
   padding-top: 40px;
 }
-.portfolioPagination{
-    padding-top: 62px;
-    padding-bottom: 142px;
-}
+
 
 @media (min-width: 992px){
 .portfolioContent{
@@ -256,7 +281,20 @@ height: 1px;
 min-width: 100%;
 max-width: 100%;
 }
-.categoryFilterBtn:focus::before {
+.activeCategory:focus::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+  background-color: #000;
+  border-radius: 50%;
+}
+.activeCategory::before {
   content: '';
   display: block;
   position: absolute;

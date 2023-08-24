@@ -1,4 +1,8 @@
 <template>
+<div class="blogBox">
+    <span class="blogTopLine"></span>
+    <span class="blogMidLine" ></span>
+    <span class="blogBotLine" ></span>
   <div class="container">
     <div class="blogBanner">
       <div class="blogTittleBox">
@@ -10,29 +14,35 @@
     </div>
     <div class="blogContent">
       <div class="blogFeed">
-        <div class="blogCardWrapper" v-for="contentItem in visibleBlogItems" :key="contentItem.id">
+        <div
+          class="blogCardWrapper"
+          v-for="contentItem in visibleBlogItems"
+          :key="contentItem.id"
+        >
           <div class="blogCardWrapperInner">
             <contentCard :contentItem="contentItem" />
-            <ReadMoreButton :to="`/blog/${contentItem.id}`" label="Read More" />
-          </div>  
+            <ReadMoreButton class="readMoreBlog" :to="`/blog/${contentItem.id}`" label="Read More" />
+          </div>
         </div>
       </div>
     </div>
     <blogPagination
       class="blogPagination"
       :currentPage="currentPage"
-      :pageSize="pageSize"
+      :dynamicPageSize="pageSize"
       :totalItems="totalItems"
+      :totalItemsInPagination="totalItems"
       @pageChange="handlePageChange"
     />
   </div>
+</div>  
 </template>
 
 <script setup>
 import { ref, onMounted, computed } from 'vue';
 import contentCard from "../components/contentCard.vue";
 import ReadMoreButton from '/src/components/UI/buttons/readMoreBlog.vue';
-import blogPagination from '../components/UI/blogPagination.vue';
+import blogPagination from '../components/UI/blogPagination.vue'; 
 import axios from 'axios';
 import Breadcrumbs from './../components/UI/breadCrumbs.vue';
 
@@ -40,6 +50,8 @@ const breadcrumbs = [
   { label: 'Home', to: '/' },
   { label: 'Blog', to: '/blog' },
 ];
+
+
 
 const blogItem = ref([]);
 const currentPage = ref(1);
@@ -52,8 +64,6 @@ const fetchBlogs = async () => {
     blogItem.value = response.data.data.blogs;
     totalItems.value = blogItem.value.length; 
     localStorage.setItem('totalItems', totalItems.value); 
-    console.log(`Всього елементів: ${totalItems.value}`);
-    console.log(`Всього сторінок: ${totalPages.value}`);
   } catch (e) {
     console.error(e);
   }
@@ -63,7 +73,6 @@ onMounted(fetchBlogs);
 
 const handlePageChange = (page) => {
   currentPage.value = page;
-  console.log(`Переключено на сторінку ${page}`);
 };
 
 const totalPages = computed(() => {
@@ -79,10 +88,18 @@ const visibleBlogItems = computed(() => {
   return blogItem.value.slice(startIndex, endIndex);
 });
 
+
+
+
 </script>
 
 
-<style>
+
+<style scoped>
+.blogBox{
+  position: relative;
+}
+
 .blogBanner{
 display: flex;
 position: relative;
@@ -118,6 +135,10 @@ justify-content: center;
 .blogPagination{
   padding-top: 62px;
   padding-bottom: 142px;
+
+
+
+
 }
 @media (min-width: 1400px){
 .blogBanner{
@@ -127,5 +148,93 @@ gap: 28px;
 .blogTitle{
   font-size: 70px;
 }
+.blogTopLine{
+  position: absolute;
+  background-image: url('../assets/vectors/blogTopLine.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  top: -105px;
+  left: -150px;
+  width: 900px;
+  height: 1000px;
 }
+.blogMidLine{
+  position: absolute;
+  background-image: url('../assets/vectors/blogMidLine.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  top: 1720px;
+  right: -178px;
+  width: 500px;
+  height: 600px;
+}
+
+/*for next pages*/
+.nextPageTopLine{
+  position: absolute;
+  background-image: url('../assets/vectors/blogNextPageTopLine.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  top: -105px;
+  left: -150px;
+  width: 900px;
+  height: 1000px;
+}
+.nextPageMidLine{
+  position: absolute;
+  background-image: url('../assets/vectors/blogNextPageMidLine.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  top: 1720px;
+  right: -178px;
+  width: 500px;
+  height: 600px;
+}
+/*for next pages*/
+
+
+.blogBotLine{
+  position: absolute;
+  background-image: url('../assets/vectors/blogBotLine.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+ 
+  transform: rotate(169deg);
+  bottom: -69px;
+  left: -102px;
+  width: 731px;
+  height: 613px;
+}
+.readMoreBlog{
+  margin-top: 4px;
+}
+}
+@media (min-width: 1920px){
+
+.blogTopLine{
+  top: -105px;
+  left: -140px;
+  width: 992px;
+  height: 1640px;
+}
+
+.blogMidLine{
+  top: 1720px;
+  right: -178px;
+  width: 682px;
+  height: 892px;
+}
+.blogBotLine{
+  bottom: -70px;
+  left: 50px;
+  width: 819px;
+  height: 529px;
+}
+}
+
 </style>

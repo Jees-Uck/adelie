@@ -40,6 +40,7 @@ const imageLoaded = ref(false);
     position: relative;
     max-width: 355px;
     max-height: 480px;  
+    min-width: 355px;
 }
 .portfolioCard::before{
     content: '';
@@ -122,8 +123,9 @@ const imageLoaded = ref(false);
 
 @media (min-width: 992px){
 .portfolioCard {
-    max-width: 400px;
+    max-width: 412px;
     max-height: 520px;  
+        min-width: 412px;
 }
 }
 

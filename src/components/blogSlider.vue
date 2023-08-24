@@ -1,16 +1,21 @@
 <template>
   <div class="blogSlider">
     <div class="blogSliderButBox">
-      <div class="sliderButton sliderButtonPrevious" @click="showPreviousBlogs" :class="{ 'disabled': !hasPreviousBlogs }">
-        Previous
-      </div>
-      <div class="sliderButton sliderButtonNext" @click="showNextBlogs" :class="{ 'disabled': !hasNextBlogs }">
-        Next
-      </div>
+  <div class="sliderButton sliderButtonPrevious" @click="showPreviousBlogs" :class="{ 'disabled': !hasPreviousBlogs }">
+    {{ showAdditionalText ? 'Previous Article' : 'Previous' }}
+  </div>
+  <div class="sliderButton sliderButtonNext" @click="showNextBlogs" :class="{ 'disabled': !hasNextBlogs }">
+    {{ showAdditionalText ? 'Next Article' : 'Next' }}
+  </div>
     </div>
     <div class="blogSliderTitleBox">
       <h3 class="blogSliderTitle">
-      <span class="blogFirstWord">Recommended </span> materials</h3>
+        <span class="blogFirstWord">Recommended </span> materials
+      </h3>
+      <div class="sliderBtnsForLargeScreen">
+        <div class="sliderButton sliderButtonLeft sliderBtnLgScr" @click="showPreviousBlogs" :class="{ 'disabled': !hasPreviousBlogs }"></div>
+        <div class="sliderButton sliderButtonRight sliderBtnLgScr" @click="showNextBlogs" :class="{ 'disabled': !hasNextBlogs }"></div>
+      </div>
     </div>
     <div class="blogCardContainer">
       <div class="blogCards">
@@ -77,7 +82,11 @@ const showNextBlogs = () => {
     activeIndex.value = (activeIndex.value + itemsPerPage) % props.blogs.length;
   }
 };
+const showAdditionalText = ref(window.innerWidth >= 1200);
 
+window.addEventListener('resize', () => {
+  showAdditionalText.value = window.innerWidth >= 1200;
+});
 
 </script>
 
@@ -92,13 +101,13 @@ const showNextBlogs = () => {
 .blogSliderButBox {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  min-width: 100%;
   justify-content: space-between;
   max-width: 255px;
 }
 
 .sliderButton {
-  display: inline-block;
+  display: inline-flex;
   position: relative;
   padding-top: 4px;
   color: #000;
@@ -108,8 +117,26 @@ const showNextBlogs = () => {
   width: auto;
   height: 35px;
 }
+.sliderButtonPrevious{
+  justify-content: flex-start;
+}
+.sliderButtonNext{
+  justify-content: flex-end;
+}
 
-.sliderButton::after {
+.sliderButtonNext::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right:  -6px;
+  width: 75%;
+  height: 15px;
+  background-color: #4CF049;
+  z-index: -1;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+.sliderButtonPrevious::after {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -121,7 +148,6 @@ const showNextBlogs = () => {
   transform: translateY(0);
   transition: transform 0.3s ease;
 }
-
 .sliderButtonNext {
   width: 20%;
 }
@@ -147,8 +173,14 @@ const showNextBlogs = () => {
   width: 30px;
   height: 100%;
   top: 50%;
-}
 
+}
+.sliderButtonPrevious{
+margin-left: 54px;
+}
+.sliderButtonNext{
+margin-right: 54px;
+}
 .sliderButtonPrevious::before {
   background-image: url('../assets/vectors/BlogSliderArrowLeft.svg');
   left: -49px;
@@ -164,7 +196,9 @@ const showNextBlogs = () => {
   padding-top: 37px;
   margin-bottom: -26px;
 }
-
+.sliderBtnsForLargeScreen{
+  display: none;
+}
 .blogSliderTitle {
   font: 300 35px/50px gilroylight;
 }
@@ -182,6 +216,8 @@ const showNextBlogs = () => {
   z-index: -1;
   transform: translateY(0); 
 }
+
+
 .blogCardContainer {
   width: 100%;
   margin-top: 20px;
@@ -218,8 +254,16 @@ const showNextBlogs = () => {
   object-fit: cover;
 }
 
-/* медіазапити */
-
+/* media screens */
+@media (min-width: 425px) {
+.sliderButtonNext::after {
+  right:  -6px;
+  width: 75%;
+}
+.sliderButtonPrevious::after {
+  width: 100%;
+}
+}
 @media (min-width: 576px) {
   .blogSliderButBox {
     max-width: 400px;
@@ -227,10 +271,39 @@ const showNextBlogs = () => {
   .blogFirstWord::before{
     width: 96%;
   }
-
+.sliderButtonNext::after {
+  right:  -2px;
+  width: 50%;
+}
+.sliderButtonPrevious::after {
+  width: 100%;
+}
+}
+@media (min-width: 768px) {
+.sliderButtonNext::after {
+right:  -2px;
+width: 35%;
 }
 
+}
+@media (min-width: 992px) {
+.sliderButtonNext::after {
+  width: 30%;
+}
+.sliderButtonPrevious::after {
+  width: 100%;
+}
+}
 @media (min-width: 1200px) {
+  .blogSliderTitleBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sliderBtnsForLargeScreen{
+  display: flex;
+  gap: 60px;
+  }
   .blogSliderTitle {
     font-size: 40px;
     line-height: 60px;
@@ -243,8 +316,64 @@ const showNextBlogs = () => {
   .blogFirstWord::before{
     bottom: 1%;
   }
+.sliderButtonNext::after {
+right:  0;
+width: 58%;
+}
+.sliderButtonPrevious::after {
+  width: 100%;
 }
 
+.sliderBtnLgScr{
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+
+
+
+.sliderButtonLeft::before {
+  content: "";
+  position: absolute;
+  background-image: url('../assets/vectors/globalVectors/sliderBigArrowLeft.svg');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-17%);
+}
+
+.sliderButtonRight::before {
+  content: "";
+  position: absolute;
+  background-image: url('../assets/vectors/globalVectors/sliderBigArrowRight.svg');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-17%);
+}
+
+}
+@media (min-width: 1400px) {
+  .sliderButtonNext::after {
+  width: 50%;
+  
+}
+.sliderButtonPrevious::after {
+  width: 100%;
+}
+}
+@media (min-width: 1600px) {
+.sliderButtonPrevious::after {
+  width: 100%;
+}
+}
 @media (min-width: 1920px) {
   .blogSliderTitle {
     font-size: 50px;
@@ -253,6 +382,9 @@ const showNextBlogs = () => {
     .blogFirstWord::before{
     bottom: 12%;
   }
+  .sliderButtonPrevious::after {
+  width: 100%;
+}
 }
 </style>
 

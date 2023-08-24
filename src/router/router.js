@@ -29,7 +29,7 @@ const routes = [
         component: Portfolio,
         props: true,
     },
-/* портфоліо тимчасово розміщенно в "Контакти" */
+
 ];
 
 const router = createRouter({

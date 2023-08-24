@@ -36,6 +36,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
+
 .cardBox{
     width: 100%;
     display: flex;
@@ -46,6 +47,7 @@ const props = defineProps({
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-width: 100%;
 }
 .card {
     max-width: 793px;
@@ -102,6 +104,7 @@ const props = defineProps({
   font-weight: 300;
   line-height: 40px;
   padding-top: 8px;
+  padding-bottom: 19px;
 }
 
 .cardDate,
@@ -138,9 +141,8 @@ const props = defineProps({
 }
 .cardTextBox {
   width: 100%;
-  margin-bottom: 13px;
   position: relative;
- 
+  padding-bottom: 13px;
 }
 
 .cardContent {
@@ -201,20 +203,20 @@ max-width: 793px;
   line-height: 35px;
 }
 .readMore {
-    padding-top: 0;
+    padding-top: 4px;
     font-size: 20px;
 
 }
 }
 @media (min-width: 1400px) { 
 .card{
-    padding-top: 35px;
+    padding-top: 25px;
 }
 
 }
 @media (min-width: 1920px) { 
 .card{
-    padding-top: 47px;
+    padding-top: 27px;
 }
 }
 </style>
